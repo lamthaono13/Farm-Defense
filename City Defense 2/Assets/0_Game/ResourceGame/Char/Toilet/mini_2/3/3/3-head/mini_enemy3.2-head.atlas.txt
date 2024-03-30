@@ -1,0 +1,8 @@
+mini_enemy3.2-head.png
+size:404,404
+filter:Linear,Linear
+pma:true
+mini/3.2/decor_3
+bounds:2,22,400,114
+mini/3.2/ligh_3
+bounds:2,138,343,264

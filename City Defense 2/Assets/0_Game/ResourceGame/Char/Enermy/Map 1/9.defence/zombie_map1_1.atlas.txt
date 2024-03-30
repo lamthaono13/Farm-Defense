@@ -1,0 +1,18 @@
+zombie_map1_1.png
+size:292,500
+filter:Linear,Linear
+pma:true
+body
+bounds:2,152,288,346
+l arm
+bounds:2,2,126,72
+r arm
+bounds:2,2,126,72
+l leg
+bounds:130,12,62,80
+rotate:90
+r leg
+bounds:130,12,62,80
+rotate:90
+shadow
+bounds:2,76,246,74

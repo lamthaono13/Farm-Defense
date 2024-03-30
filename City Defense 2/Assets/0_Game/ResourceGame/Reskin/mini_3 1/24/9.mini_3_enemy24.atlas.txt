@@ -1,0 +1,17 @@
+9.mini_3_enemy24.png
+size:1292,1292
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:2,33,325,72
+offsets:1,1,327,74
+rotate:90
+mini_3/24/body
+bounds:415,796,594,494
+mini_3/24/bomb
+bounds:846,240,444,554
+mini_3/24/head
+bounds:2,360,411,930
+mini_3/24/nap
+bounds:415,173,429,621
+offsets:1,1,431,623

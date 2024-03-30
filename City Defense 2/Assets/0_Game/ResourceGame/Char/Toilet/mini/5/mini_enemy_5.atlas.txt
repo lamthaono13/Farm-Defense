@@ -1,0 +1,17 @@
+mini_enemy_5.png
+size:884,884
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:664,557,325,72
+offsets:1,1,327,74
+rotate:90
+mini/5/back_5
+bounds:314,500,348,382
+offsets:1,0,349,382
+mini/5/body_5
+bounds:2,2,415,285
+mini/5/head_5
+bounds:2,289,310,593
+mini/5/nap_5
+bounds:419,130,307,368

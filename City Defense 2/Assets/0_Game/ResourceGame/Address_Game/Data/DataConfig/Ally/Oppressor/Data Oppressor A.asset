@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4302c41f38009204aa89a1a9a865c590, type: 3}
+  m_Name: Data Oppressor A
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: dataConfigForTypeCharBase
+      Entry: 7
+      Data: 0|DataConfigForTypeChar, Assembly-CSharp
+    - Name: Energy
+      Entry: 3
+      Data: 15
+    - Name: Damage
+      Entry: 4
+      Data: 8
+    - Name: HP
+      Entry: 4
+      Data: 120
+    - Name: Speed
+      Entry: 4
+      Data: 1
+    - Name: AttackSpeed
+      Entry: 4
+      Data: 0.1
+    - Name: RadiusCheck
+      Entry: 4
+      Data: 10
+    - Name: RangeToAttack
+      Entry: 4
+      Data: 6
+    - Name: BaseStar
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: General
+    - Name: Description
+      Entry: 1
+      Data: 'Punching holes in Zombies is easier than ever.
+
+        Countermeasured
+        against Zombies with long-range attack capabilities'
+    - Name: DescriptionAbility
+      Entry: 1
+      Data: Capable of simultaneously attacking multiple targets within range
+    - Name: levelConditionUnlockGold
+      Entry: 3
+      Data: 10
+    - Name: goldUnlock
+      Entry: 3
+      Data: 1000
+    - Name: stringDesUnlockGold
+      Entry: 1
+      Data: Traffic Cone level 10 to Unlock
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dataConfigIndexGrow
+      Entry: 7
+      Data: 1|DataConfigIndexGrow, Assembly-CSharp
+    - Name: AttackGrow
+      Entry: 4
+      Data: 1.07
+    - Name: HPGrow
+      Entry: 4
+      Data: 1.33
+    - Name: AttackSpeedGrow
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dataCardConditionGold
+      Entry: 7
+      Data: 2|DataCard, Assembly-CSharp
+    - Name: Energy
+      Entry: 3
+      Data: 0
+    - Name: Star
+      Entry: 3
+      Data: 0
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: TypeGroup
+      Entry: 3
+      Data: 4
+    - Name: TypeTier
+      Entry: 3
+      Data: 1
+    - Name: TypeId
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 

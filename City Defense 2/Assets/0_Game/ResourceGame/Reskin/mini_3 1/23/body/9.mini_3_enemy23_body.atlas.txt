@@ -1,0 +1,17 @@
+9.mini_3_enemy23_body.png
+size:1340,1340
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:2,61,325,72
+offsets:1,1,327,74
+rotate:90
+mini_3/23/back
+bounds:871,315,467,527
+mini_3/23/body
+bounds:440,844,594,494
+mini_3/23/head
+bounds:2,388,436,950
+mini_3/23/nap
+bounds:440,221,429,621
+offsets:1,1,431,623

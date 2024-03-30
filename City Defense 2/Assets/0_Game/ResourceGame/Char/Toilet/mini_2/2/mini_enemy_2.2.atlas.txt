@@ -1,0 +1,17 @@
+mini_enemy_2.2.png
+size:692,692
+filter:Linear,Linear
+pma:true
+mini/1/back_1
+bounds:297,438,250,287
+rotate:90
+mini/1/nap_1
+bounds:329,2,219,276
+rotate:90
+mini/1/shadow
+bounds:2,125,325,72
+offsets:1,1,327,74
+mini/2.2/body_2
+bounds:297,223,302,213
+mini/2.2/head_2
+bounds:2,199,293,489

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4302c41f38009204aa89a1a9a865c590, type: 3}
+  m_Name: Data Sniper C
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: dataConfigForTypeCharBase
+      Entry: 7
+      Data: 0|DataConfigForTypeChar, Assembly-CSharp
+    - Name: Energy
+      Entry: 3
+      Data: 1
+    - Name: Damage
+      Entry: 4
+      Data: 70
+    - Name: HP
+      Entry: 4
+      Data: 100
+    - Name: Speed
+      Entry: 4
+      Data: 1
+    - Name: AttackSpeed
+      Entry: 4
+      Data: 1
+    - Name: RadiusCheck
+      Entry: 4
+      Data: 15
+    - Name: RangeToAttack
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dataConfigIndexGrow
+      Entry: 7
+      Data: 1|DataConfigIndexGrow, Assembly-CSharp
+    - Name: AttackGrow
+      Entry: 4
+      Data: 1.25
+    - Name: HPGrow
+      Entry: 4
+      Data: 1.7
+    - Name: AttackSpeedGrow
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 

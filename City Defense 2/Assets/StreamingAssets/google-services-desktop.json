@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475092423556",
+    "project_id": "city-defense-2",
+    "storage_bucket": "city-defense-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475092423556:android:e944dd0d268f987b9d83d1",
+        "android_client_info": {
+          "package_name": "com.higame.city.defense.remake"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDR_FiFvGIoa8Bh2EQvrOcN448CVbGE8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

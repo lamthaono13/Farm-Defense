@@ -1,0 +1,751 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Free
+      TermType: 0
+      Description: 
+      Languages:
+      - Free
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Gem
+      TermType: 0
+      Description: 
+      Languages:
+      - Gem
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Gold
+      TermType: 0
+      Description: 
+      Languages:
+      - Gold
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Hero
+      TermType: 0
+      Description: 
+      Languages:
+      - Hero
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Nuclear
+      TermType: 0
+      Description: 
+      Languages:
+      - Nuclear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Level
+      TermType: 0
+      Description: 
+      Languages:
+      - Level {[Level]}
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lobby_Barracks
+      TermType: 0
+      Description: 
+      Languages:
+      - BARRACKS
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lobby_Play
+      TermType: 0
+      Description: 
+      Languages:
+      - PLAY
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lobby_Shop
+      TermType: 0
+      Description: 
+      Languages:
+      - SHOP
+      Flags: 00
+      Languages_Touch: []
+    - Term: Not_Enough_Gem
+      TermType: 0
+      Description: 
+      Languages:
+      - Not Enough Gem
+      Flags: 00
+      Languages_Touch: []
+    - Term: Not_Enough_Gold
+      TermType: 0
+      Description: 
+      Languages:
+      - Not Enough Gold
+      Flags: 00
+      Languages_Touch: []
+    - Term: Setting_Haptic
+      TermType: 0
+      Description: 
+      Languages:
+      - Haptic
+      Flags: 00
+      Languages_Touch: []
+    - Term: Setting_Music
+      TermType: 0
+      Description: 
+      Languages:
+      - Music
+      Flags: 00
+      Languages_Touch: []
+    - Term: Setting_Sound
+      TermType: 0
+      Description: 
+      Languages:
+      - Sound
+      Flags: 00
+      Languages_Touch: []
+    - Term: Setting_Title
+      TermType: 0
+      Description: 
+      Languages:
+      - SETTING
+      Flags: 00
+      Languages_Touch: []
+    - Term: Spin_Title
+      TermType: 0
+      Description: 
+      Languages:
+      - SPIN
+      Flags: 00
+      Languages_Touch: []
+    - Term: Spin_Earn_Claim_x
+      TermType: 0
+      Description: 
+      Languages:
+      - Claim x{[Index]}
+      Flags: 00
+      Languages_Touch: []
+    - Term: Spin_Earn_Claim
+      TermType: 0
+      Description: 
+      Languages:
+      - Claim
+      Flags: 00
+      Languages_Touch: []
+    - Term: Spin_FreeSpin
+      TermType: 0
+      Description: 
+      Languages:
+      - Free Spin
+      Flags: 00
+      Languages_Touch: []
+    - Term: StarterPack_Popup_Button
+      TermType: 0
+      Description: 
+      Languages:
+      - BUY NOW!
+      Flags: 00
+      Languages_Touch: []
+    - Term: StarterPack_Popup_CountDown
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Ends in:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: StarterPack_Popup_Item_Noads
+      TermType: 0
+      Description: 
+      Languages:
+      - No ads
+      Flags: 00
+      Languages_Touch: []
+    - Term: StarterPack_Popup_Item_Samurai
+      TermType: 0
+      Description: 
+      Languages:
+      - Samurai
+      Flags: 00
+      Languages_Touch: []
+    - Term: StarterPack_Title
+      TermType: 0
+      Description: 
+      Languages:
+      - Starter Pack
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_State_Equip
+      TermType: 0
+      Description: 
+      Languages:
+      - Equip
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_State_Equipped
+      TermType: 0
+      Description: 
+      Languages:
+      - Equipped
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_State_Locked
+      TermType: 0
+      Description: 
+      Languages:
+      - Locked
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Barel_0_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Urban
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Barel_1_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Makeshift Barrier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Barel_2_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Hard Rock
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Barel_3_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Metal
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_MeleeAlly_0_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Police '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_MeleeAlly_1_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Soldier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_MeleeAlly_2_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Riot Control
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_MeleeAlly_3_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Samurai
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_MeleeAlly_4_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - DeadCool
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_RangeAlly_0_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Police '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_RangeAlly_1_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Fire Man
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_RangeAlly_2_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Terminator
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_RangeAlly_3_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Ninja
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_RangeAlly_4_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Iron Armor
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_0
+      TermType: 0
+      Description: 
+      Languages:
+      - No Bonus
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_1
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Health'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_2
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Attack'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_3
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Attack Speed'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_4
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Move Speed'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_5
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Reduce Damage'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Barrack_Bonus_6
+      TermType: 0
+      Description: 
+      Languages:
+      - ' + {[percent]} % Attack Range'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shop_Pack_1_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - DeadCool Pack
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shop_Pack_2_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Iron Armor Pack
+      Flags: 00
+      Languages_Touch: []
+    - Term: Congratulation
+      TermType: 0
+      Description: 
+      Languages:
+      - Congratulation
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tap_To_Continue
+      TermType: 0
+      Description: 
+      Languages:
+      - Tap To Continue
+      Flags: 00
+      Languages_Touch: []
+    - Term: Only_1_Time
+      TermType: 0
+      Description: 
+      Languages:
+      - Only 1 time
+      Flags: 00
+      Languages_Touch: []
+    - Term: NEW YORK
+      TermType: 0
+      Description: 
+      Languages:
+      - New York
+      Flags: 00
+      Languages_Touch: []
+    - Term: TOKYO
+      TermType: 0
+      Description: 
+      Languages:
+      - Tokyo
+      Flags: 00
+      Languages_Touch: []
+    - Term: SHAHARA
+      TermType: 0
+      Description: 
+      Languages:
+      - Shahara
+      Flags: 00
+      Languages_Touch: []
+    - Term: Map_Description_0
+      TermType: 0
+      Description: 
+      Languages:
+      - You are here
+      Flags: 00
+      Languages_Touch: []
+    - Term: Map_Description_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Completed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Map_Description_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Finish {[name_map]} to Unlock
+      Flags: 00
+      Languages_Touch: []
+    - Term: Map_ComingSoon
+      TermType: 0
+      Description: 
+      Languages:
+      - Coming soon
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_0_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Regular Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_1_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Balloon Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_2_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Psycho Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_3_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Coggy Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_4_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Heavy Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_5_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Mummy Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_6_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Guard Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_7_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Explorer Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_8_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Imp Mummy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_9_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Mummified Gargantuar
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_10_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Berserker
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_11_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Frankenstein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_12_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Anubis
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_13_Name
+      TermType: 0
+      Description: 
+      Languages:
+      - Pharaon
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_1_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Dangerous range weapon. They throw potions on troops deal AOE damage and 
+        have a poison effect
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_2_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Fly across obstacle. Only Range Troops can shoot down them.
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_3_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Boom Zombie will explode on their own and deal AOE damage
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_4_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Stronger Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_6_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Block by range weapon
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_7_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - They throw dynamite on troops deal AOE damage and  have a burn effect
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_8_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Boom Zombie will explode on their own and deal AOE damage
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_9_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Stronger Zombie
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_10_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Barrier can't block him
+      Flags: 00
+      Languages_Touch: []
+    - Term: Enemy_11_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - BOSS OF DESTRUCTION!!!!
+      Flags: 00
+      Languages_Touch: []
+    - Term: Energy_Tut
+      TermType: 0
+      Description: 
+      Languages:
+      - Kill enemy to Earn energy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Reward
+      TermType: 0
+      Description: 
+      Languages:
+      - Reward
+      Flags: 00
+      Languages_Touch: []
+    - Term: Max
+      TermType: 0
+      Description: 
+      Languages:
+      - Max
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Defeated
+      TermType: 0
+      Description: 
+      Languages:
+      - Defeated
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_You_Earn
+      TermType: 0
+      Description: 
+      Languages:
+      - 'You Earn:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_NoThanks
+      TermType: 0
+      Description: 
+      Languages:
+      - No Thanks
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Your_Reward
+      TermType: 0
+      Description: 
+      Languages:
+      - Your Reward
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Bonus
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Bonus:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Victory
+      TermType: 0
+      Description: 
+      Languages:
+      - Victory
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Bonus_Nuclear_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Bonus 1 nuclear
+      Flags: 00
+      Languages_Touch: []
+    - Term: EndGame_Bonus_Hero_Description
+      TermType: 0
+      Description: 
+      Languages:
+      - Bonus 1 hero
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rate_Question
+      TermType: 0
+      Description: 
+      Languages:
+      - How would you rate us?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rate_Input_Feild
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Tell others what you think '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Unlocked
+      TermType: 0
+      Description: 
+      Languages:
+      - Unlocked!
+      Flags: 00
+      Languages_Touch: []
+    - Term: Max_Tier
+      TermType: 0
+      Description: 
+      Languages:
+      - Max Tier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Continue
+      TermType: 0
+      Description: 
+      Languages:
+      - Continue
+      Flags: 00
+      Languages_Touch: []
+    - Term: Draw_To_protect
+      TermType: 0
+      Description: 
+      Languages:
+      - Draw To protect
+      Flags: 00
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    IgnoreDeviceLanguage: 1
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxqL655aXipAiGFO2puZ84hXYPgHRGqo2lOjATk1AdFiHCNg19MeDiYG2E8hM_VTmw/exec
+    Google_SpreadsheetKey: 1aSLkVM0vDPxn6izNNA6CiYoDAMNLJp0yMJTRt52rBGE
+    Google_SpreadsheetName: 'I2Loc Zombie Defense: City Survivor Localization'
+    Google_LastUpdatedVersion: 1687861762832
+    Google_Password: change_this
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1

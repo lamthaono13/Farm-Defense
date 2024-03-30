@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e71e1f4757a2f4a8d0468205e4d81a, type: 3}
+  m_Name: AnimVanguard_C
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: DataEachAnimations
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[DataEachAnimation, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 11
+    - Name: 
+      Entry: 7
+      Data: 1|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 0
+    - Name: NameAnimtion
+      Entry: 1
+      Data: idle_1_3
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 1
+    - Name: NameAnimtion
+      Entry: 1
+      Data: run_1_3
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 2
+    - Name: NameAnimtion
+      Entry: 1
+      Data: attack_1_2
+    - Name: NameEvent
+      Entry: 1
+      Data: attack
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 3
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 4
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 5
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 6
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 7
+    - Name: NameAnimtion
+      Entry: 1
+      Data: dead
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 8
+    - Name: NameAnimtion
+      Entry: 1
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 9
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 10
+    - Name: NameAnimtion
+      Entry: 1
+      Data: jump
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

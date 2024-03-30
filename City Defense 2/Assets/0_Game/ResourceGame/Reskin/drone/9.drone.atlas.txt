@@ -1,0 +1,16 @@
+9.drone.png
+size:516,516
+filter:Linear,Linear
+pma:true
+bg
+bounds:2,276,395,236
+body
+bounds:2,106,345,168
+l wing
+bounds:399,344,168,80
+rotate:90
+r wing
+bounds:2,50,83,54
+text
+bounds:349,10,264,163
+rotate:90

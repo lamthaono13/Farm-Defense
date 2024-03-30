@@ -1,0 +1,780 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c46ed672292249fa8d244dd2e7a8541, type: 3}
+  m_Name: Vanguard Ally yadesheet
+  m_EditorClassIdentifier: 
+  data:
+    items:
+      keys: 00000000010000000200000003000000080000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000
+      values:
+      - height: 25
+        cells:
+          keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
+          values:
+          - rawValue: 
+            value: Id
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Name
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: EnergyCost
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Level
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: GoldUpgrade
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: GoldGrow
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Atk
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: AtkGrow
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Hp
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: HpGrow
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: AtkSpeed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: AtkSpeedGrow
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: MoveSpeed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Range
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: DetectRange
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Base Star
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Description
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: GemUnlock
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Gem Upgrade Star
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Ability Des
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Level Condition
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Gold Unlock
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Text Des UnlockGold
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
+          values:
+          - rawValue: 
+            value: 2001
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Thug
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 50
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 50
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 15
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 100
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 25
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Thugs risk their lives on the front lines
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 50
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Approach and attack the enemy.
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: None
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
+          values:
+          - rawValue: 
+            value: 2101
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Police
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1000
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.2
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 200
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 30
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 500
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 100
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Brave policemen with excellent defense abilities. Be careful with
+              the AOE damage
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 300
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 100
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: When destroyed, return 1/2 Stamina summon this troops.
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 20
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 5000
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Thug level 20 to Unlock
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
+          values:
+          - rawValue: 
+            value: 2201
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Berserk
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 20000
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 500
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 75
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1500
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 300
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Zombie slayers never back down. Let them approach the ranged attackers.
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1000
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 200
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: For every 5% HP lost, ATK will increase by 3%.
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 20
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 50000
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Police level 20 to Unlock
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000
+          values:
+          - rawValue: 
+            value: "GoldUpgrade: V\xE0ng d\xF9ng \u0111\u1EC3 upgrade \n\nGoldGrow:
+              H\u1EC7 s\u1ED1 v\xE0ng x l\xEAn t\u01B0\u01A1ng \u1EE9ng m\u1ED7i
+              level n\xE2ng c\u1EA5p\n\nT\u01B0\u01A1ng t\u1EF1 AtkGrow, Hp Grow,
+              AtkSpeed Grow c\u0169ng l\xE0 h\u1EC7 s\u1ED1 x khi n\xE2ng m\u1ED7i
+              level\n"
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 50
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 62.5
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 78.125
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 97.65625
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 122.0703125
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 152.5878906
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 190.7348633
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 238.4185791
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 298.0232239
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 372.5290298
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 465.6612873
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 582.0766091
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 727.5957614
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 909.4947018
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 1136.868377
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 1421.085472
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 1776.356839
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 2220.446049
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 2775.557562
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 3469.446952
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 4336.80869
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 5421.010862
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 6776.263578
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 8470.329473
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 10587.91184
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 13234.8898
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 16543.61225
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 20679.51531
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 25849.39414
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0c0000000d000000
+          values:
+          - rawValue: 
+            value: 32311.74268
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.25
+            UnityObject: {fileID: 0}
+            UOs: []
+  columnHeaders:
+    items:
+      keys: 
+      values: []
+  VisualHeaders: 0

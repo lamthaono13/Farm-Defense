@@ -1,0 +1,491 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c46ed672292249fa8d244dd2e7a8541, type: 3}
+  m_Name: yadesheetSpecialIndex
+  m_EditorClassIdentifier: 
+  data:
+    items:
+      keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f00000020000000210000002200000023000000240000002500000026000000
+      values:
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Name
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Index
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Ally_C_ReduceDamage
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.3
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Ally_B_Index_Energy
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Ally_A_HP_Lost
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.05
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Ally_A_Damage_Inscrease
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.03
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_C_Percent_Crit
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_C_Index_Damage_Crit
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_B_Percent_Stun
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_B_Time_Stun
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_A_Percent_OneShot
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 10
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Ally_A_Condition_HP_Percent
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_C_Range_AOE
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_C_Percent_Normal_Damage
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_C_Percent_AOE_Damage
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_C_Index_Damage_Earn_From_Melee
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.3
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_C_Index_Damage_Earn_From_Range
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_B_Range_AOE
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_B_Percent_Damage_DOT_Per_Second
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_B_Time_DOT
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_A_Range_AOE
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_A_Index_Reduce_Speed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Ally_A_Time_Reduce_Speed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Oppressor_Ally_C_Time_Reduce_Speed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.1
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Oppressor_Ally_B_Percent_Crit
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 20
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Opperssor_Ally_B_Index_Crit_Damage
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Enemy_C_Index_Inscrease_Speed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.1
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Enemy_C_Time_Inscrease_Speed
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Vanguard_Enemy_B_Index_Crazy_State
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Enemy_B_DOT_Time
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Sniper_Enemy_B_Index_Damage_DOT
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.05
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_C_Range_AOE
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_C_Index_Damage_AOE_Enemy
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_B_Range_AOE
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_B_DOT_Time
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_B_Index_Damage_DOT
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Gunner_Enemy_B_Index_Damage_AOE_Barrier
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Oppressor_Enemy_C_Index_Damage_Earn_Has_Sheild
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Oppressor_Enemy_C_Number_To_Break_Sheild
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Oppressor_Enemy_B_Index_Damage_Earn_Crit_Has_Sheild
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 0.5
+            UnityObject: {fileID: 0}
+            UOs: []
+  columnHeaders:
+    items:
+      keys: 
+      values: []
+  VisualHeaders: 0

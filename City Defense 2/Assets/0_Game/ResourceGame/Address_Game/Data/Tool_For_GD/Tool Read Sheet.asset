@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47caa4991fa34614a8302b6e1649100e, type: 3}
+  m_Name: Tool Read Sheet
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 13334aaade9d39d4f8acece788994425, type: 2}
+    - {fileID: 11400000, guid: 283afae526c0bd74a9294c105767c788, type: 2}
+    - {fileID: 11400000, guid: bd97f504fac04184cb7206c1750d7c85, type: 2}
+    - {fileID: 11400000, guid: b6e8f8a5dba60204a9e92d1653d85c4e, type: 2}
+    - {fileID: 11400000, guid: a2d5f03b3278f944ba582b12251ae71f, type: 2}
+    - {fileID: 11400000, guid: ce88bc0f1ba15e24db1d9260b3b5bcb3, type: 2}
+    - {fileID: 11400000, guid: 82f163f31a4b4d140a47884c5fe9ec53, type: 2}
+    - {fileID: 11400000, guid: 73a2a1f7795949e479e934281b4cb38f, type: 2}
+    - {fileID: 11400000, guid: ab62cea2cbff16d47aedb8323165e6f2, type: 2}
+    - {fileID: 11400000, guid: 0e99731926cb2924fbac3ea11a3651ba, type: 2}
+    - {fileID: 11400000, guid: 08f97c14ec1b24e4ebc04681ebf27510, type: 2}
+    - {fileID: 11400000, guid: 8f3ac2e24b820f140974e58463db3294, type: 2}
+    - {fileID: 11400000, guid: 7877dcd8709c6f1428d7c3921e990371, type: 2}
+    - {fileID: 11400000, guid: a8e48947577b2e0469c1e82932fa4b24, type: 2}
+    - {fileID: 11400000, guid: 6739034a38aea3d45ad7bb17ce7aaa92, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: dataEachUnlocks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[DataEachUnlock,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  TimeDelay: 0
+  HealthInGame: 10
+  MaxTicket: 100
+  SecondToRebornTicket: 30
+  TicketReborn: 1
+  TicketPlay: 10
+  configsForAlly:
+  - {fileID: 11400000, guid: e547f4051973dbb4f9fb1691a080bf17, type: 2}
+  - {fileID: 11400000, guid: 6afd3f3a79531174a9ee1a183d53ecf5, type: 2}
+  - {fileID: 11400000, guid: ad15022be96c3f543b505b6ba5851907, type: 2}
+  - {fileID: 11400000, guid: 614d1c734106dbd4cb7553475d07b4f2, type: 2}
+  - {fileID: 11400000, guid: 014c5453a5307d3498211556910dd762, type: 2}
+  configsForEnermy:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 34d10589f220fde4691db51f4e40bab8, type: 2}
+  - {fileID: 11400000, guid: 9d746ae7f1a81a040a9dc256af5f6307, type: 2}
+  - {fileID: 11400000, guid: fedc01a536d204a49a844400fc38a035, type: 2}
+  - {fileID: 11400000, guid: 3c23262248405374da01886c64523f27, type: 2}
+  - {fileID: 11400000, guid: 0f823242d9b4c8b40ac78c2d8ee1b36f, type: 2}
+  dataConfig: {fileID: 11400000, guid: 6abdd3acd4e7a9442abeb8aa7f53fbf5, type: 2}
+  dataEnergy: {fileID: 11400000, guid: f2b090bed9af66749b9c97610b855248, type: 2}
+  yadeSheetDataConfigLevel: {fileID: 11400000, guid: 54d486fd90e00d14b94e2350f0395bca, type: 2}
+  YadeSheetDataSqawn: {fileID: 11400000, guid: b03354325406d254dab0a02d43386a26, type: 2}
+  DataGame: {fileID: 11400000, guid: 1de6349dd2cd8944f891a691423574e9, type: 2}
+  yadeSheetDataSpecialIndex: {fileID: 11400000, guid: b5a0709dac152594e8929d2c42130f81, type: 2}
+  dataSpecialIndex: {fileID: 11400000, guid: 5c62eecd062c1d0448fee755190a4a2b, type: 2}
+  yadeSheetQuest: {fileID: 11400000, guid: 6102c7c7c14c3e74ebd1b96918a9894e, type: 2}
+  dataQuestDisplay: {fileID: 11400000, guid: 3be285ee246253e499adcbf258eb4a0b, type: 2}
+  yadeSheetDataRewardMap: {fileID: 11400000, guid: a983e77bb9c6b674e802093e6e370030, type: 2}
+  dataRewardMaps:
+  - {fileID: 11400000, guid: fd413cde29c665f40be6f1a74a810936, type: 2}
+  - {fileID: 11400000, guid: 8c282a474a289c64185541cab5847495, type: 2}
+  - {fileID: 11400000, guid: 64bdf316da898e44a956460bf6b1bef3, type: 2}
+  - {fileID: 11400000, guid: 4fd98b5191910cd4ea4f9539732ff12e, type: 2}
+  yadeSheetDataShop: {fileID: 11400000, guid: b0b7dc20c47f29940be132407fcb588e, type: 2}
+  dataGetTicket: {fileID: 11400000, guid: bfb79ae969634ce44ac434b04c56f83c, type: 2}
+  dataGetGold: {fileID: 11400000, guid: 09450eef9b725fc49a21c559bc35a332, type: 2}
+  dataSpecialWeapon: {fileID: 11400000, guid: 79fcfb04792c2ad44a79c3e731ab7fce, type: 2}
+  dataGetGem: {fileID: 11400000, guid: 5d934e3a9298bc846aa06a89498761f8, type: 2}

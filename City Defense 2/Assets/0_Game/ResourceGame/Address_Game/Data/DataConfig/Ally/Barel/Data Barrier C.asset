@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4302c41f38009204aa89a1a9a865c590, type: 3}
+  m_Name: Data Barrier C
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: dataConfigForTypeCharBase
+      Entry: 7
+      Data: 0|DataConfigForTypeChar, Assembly-CSharp
+    - Name: Energy
+      Entry: 3
+      Data: 5
+    - Name: Damage
+      Entry: 4
+      Data: 0
+    - Name: HP
+      Entry: 4
+      Data: 200
+    - Name: Speed
+      Entry: 4
+      Data: 0
+    - Name: AttackSpeed
+      Entry: 4
+      Data: 1
+    - Name: RadiusCheck
+      Entry: 4
+      Data: 1
+    - Name: RangeToAttack
+      Entry: 4
+      Data: 1
+    - Name: BaseStar
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: 'Traffic Cone '
+    - Name: Description
+      Entry: 1
+      Data: They are useful roadblocks
+    - Name: DescriptionAbility
+      Entry: 1
+      Data: Solid obstacle ahead
+    - Name: levelConditionUnlockGold
+      Entry: 3
+      Data: 0
+    - Name: goldUnlock
+      Entry: 3
+      Data: 0
+    - Name: stringDesUnlockGold
+      Entry: 1
+      Data: None
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dataConfigIndexGrow
+      Entry: 7
+      Data: 1|DataConfigIndexGrow, Assembly-CSharp
+    - Name: AttackGrow
+      Entry: 4
+      Data: 0
+    - Name: HPGrow
+      Entry: 4
+      Data: 40
+    - Name: AttackSpeedGrow
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dataCardConditionGold
+      Entry: 7
+      Data: 2|DataCard, Assembly-CSharp
+    - Name: Energy
+      Entry: 3
+      Data: 0
+    - Name: Star
+      Entry: 3
+      Data: 0
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: TypeGroup
+      Entry: 3
+      Data: 0
+    - Name: TypeTier
+      Entry: 3
+      Data: 0
+    - Name: TypeId
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 

@@ -1,0 +1,17 @@
+rocket.png
+size:1832,1012
+filter:Linear,Linear
+pma:true
+1/body
+bounds:672,437,621,572
+1/cannon
+bounds:473,43,212,385
+1/upper
+bounds:1295,2,533,481
+2/body
+bounds:2,430,668,579
+2/cannon
+bounds:2,116,312,469
+rotate:90
+2/upper
+bounds:1295,485,512,524

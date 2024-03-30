@@ -1,0 +1,35 @@
+zombie_map1_3.png
+size:1500,1288
+filter:Linear,Linear
+pma:true
+balloon
+bounds:648,174,384,436
+balloon_break1
+bounds:2,2,624,644
+offsets:1,1,626,646
+rotate:90
+balloon_break2
+bounds:780,612,717,673
+offsets:1,1,719,675
+balloon_break3
+bounds:2,628,776,657
+offsets:1,2,778,660
+body
+bounds:1034,294,259,316
+hat
+bounds:1034,39,292,253
+hat2
+bounds:1328,294,144,172
+l arm
+bounds:894,74,116,98
+r hand
+bounds:894,74,116,98
+l leg
+bounds:648,8,68,90
+r leg
+bounds:648,8,68,90
+rope
+bounds:1328,41,20,251
+shadow
+bounds:648,100,244,72
+offsets:1,1,246,74

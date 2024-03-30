@@ -1,0 +1,16 @@
+mini_enemy_3_bongbay.png
+size:1348,1348
+filter:Linear,Linear
+pma:true
+mini/3/balloon
+bounds:780,909,384,436
+mini/3/balloon_break1
+bounds:721,42,624,644
+mini/3/balloon_break2
+bounds:2,13,717,673
+mini/3/balloon_break3
+bounds:2,688,776,657
+offsets:0,1,776,658
+mini/3/rope
+bounds:721,20,20,251
+rotate:90

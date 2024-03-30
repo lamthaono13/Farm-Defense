@@ -1,0 +1,13 @@
+9.mini_3_enemy3_canhquat.png
+size:1128,1128
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:1001,801,325,72
+offsets:1,1,327,74
+rotate:90
+mini_3/3/back_2
+bounds:2,2,124,855
+rotate:90
+mini_3/3/back_4
+bounds:2,128,997,998

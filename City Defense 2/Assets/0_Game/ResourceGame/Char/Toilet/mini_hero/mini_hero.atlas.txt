@@ -1,0 +1,47 @@
+mini_hero.png
+size:1040,1040
+filter:Linear,Linear
+pma:true
+back1
+bounds:517,639,268,399
+offsets:0,1,269,400
+back2
+bounds:2,154,292,401
+offsets:1,0,294,401
+back3
+bounds:577,114,180,261
+back4
+bounds:577,377,189,260
+offsets:0,0,189,261
+body
+bounds:787,638,400,251
+rotate:90
+body back
+bounds:2,557,513,481
+offsets:0,0,514,481
+eff
+bounds:768,342,268,294
+offsets:11,12,291,318
+l leg2
+bounds:2,78,74,163
+offsets:0,0,75,163
+rotate:90
+r leg2
+bounds:2,78,74,163
+offsets:0,0,75,163
+rotate:90
+l leg3
+bounds:167,43,124,109
+r leg3
+bounds:167,43,124,109
+l weapon
+bounds:296,197,358,205
+rotate:90
+r weapon
+bounds:296,197,358,205
+rotate:90
+shadow
+bounds:503,90,465,72
+rotate:90
+shoulder
+bounds:759,83,276,257

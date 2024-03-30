@@ -1,0 +1,17 @@
+9.mini_3_enemy4.png
+size:1288,1288
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:2,67,325,72
+offsets:1,1,327,74
+rotate:90
+mini_3/4/body
+bounds:409,790,594,494
+mini_3/4/bomb
+bounds:840,234,444,554
+mini_3/4/head
+bounds:2,394,405,890
+mini_3/4/nap
+bounds:409,167,429,621
+offsets:1,1,431,623

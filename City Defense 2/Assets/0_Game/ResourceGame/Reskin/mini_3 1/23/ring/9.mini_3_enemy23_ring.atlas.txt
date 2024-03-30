@@ -1,0 +1,7 @@
+9.mini_3_enemy23_ring.png
+size:556,556
+filter:Linear,Linear
+pma:true
+mini_3/23/glow
+bounds:2,340,551,213
+offsets:8,6,567,225

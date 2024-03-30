@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c20998fb69c0e24ea21f010b5e03b44, type: 3}
+  m_Name: Data Lobby GD
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Slot1
+      Entry: 7
+      Data: 0|DataEquipSlot, Assembly-CSharp
+    - Name: TypeEquip
+      Entry: 7
+      Data: 1|TypeEquip, Assembly-CSharp
+    - Name: TypeGroup
+      Entry: 3
+      Data: 0
+    - Name: TypeTier
+      Entry: 3
+      Data: 0
+    - Name: TypeId
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: level
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Slot2
+      Entry: 7
+      Data: 2|DataEquipSlot, Assembly-CSharp
+    - Name: TypeEquip
+      Entry: 7
+      Data: 3|TypeEquip, Assembly-CSharp
+    - Name: TypeGroup
+      Entry: 3
+      Data: 1
+    - Name: TypeTier
+      Entry: 3
+      Data: 0
+    - Name: TypeId
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: level
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Slot3
+      Entry: 7
+      Data: 4|DataEquipSlot, Assembly-CSharp
+    - Name: TypeEquip
+      Entry: 7
+      Data: 5|TypeEquip, Assembly-CSharp
+    - Name: TypeGroup
+      Entry: 3
+      Data: 2
+    - Name: TypeTier
+      Entry: 3
+      Data: 1
+    - Name: TypeId
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: level
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+  LevelChoose: 5

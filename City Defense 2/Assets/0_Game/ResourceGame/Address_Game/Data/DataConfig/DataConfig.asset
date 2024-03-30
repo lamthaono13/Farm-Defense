@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5b6dc8a14843443a31e588189ddf12, type: 3}
+  m_Name: DataConfig
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: aaa1b3eb5bf2c1f43b422872ee7a4f95, type: 2}
+    - {fileID: 11400000, guid: 88fb36e74eccea44bac9b6b7aec32c0f, type: 2}
+    - {fileID: 11400000, guid: 07d00e4dd75dcbb41a681a4e9d31084d, type: 2}
+    - {fileID: 11400000, guid: 4bf9845dca339d74381d801099277d61, type: 2}
+    - {fileID: 11400000, guid: 39769c961a6bb6945a443e393a6d0288, type: 2}
+    - {fileID: 11400000, guid: 161d6a536b86f9f43b7a8f88964cf534, type: 2}
+    - {fileID: 11400000, guid: 940f102643521a149877abef3aeabcf9, type: 2}
+    - {fileID: 11400000, guid: 75189e267394fab41b6e25c679227633, type: 2}
+    - {fileID: 11400000, guid: 52296dda24b7fa54ea53df348b0092b1, type: 2}
+    - {fileID: 11400000, guid: 4d9163e845b978143abc3909cacc25f9, type: 2}
+    - {fileID: 11400000, guid: 1eac7899b6782214eb8fd173b1cd1291, type: 2}
+    - {fileID: 11400000, guid: bddc9a8d72540864db8311798ef81f13, type: 2}
+    - {fileID: 11400000, guid: 0384cddfb1661c54a9bf12cc9cc9d98a, type: 2}
+    - {fileID: 11400000, guid: 56a98f624628e8b44accc9fdfc7eb160, type: 2}
+    - {fileID: 11400000, guid: b2449ba766df5094faaec7a21d88d33c, type: 2}
+    - {fileID: 11400000, guid: 311fcf2d50118ee4dab96ae525d0a482, type: 2}
+    - {fileID: 11400000, guid: 87140922655b2304f95a55c6b49edca4, type: 2}
+    - {fileID: 11400000, guid: 4de3cdb6c5cfb1d4eb3851a70aacf446, type: 2}
+    - {fileID: 11400000, guid: 29aac66adb67b4845aa25bcee497fb99, type: 2}
+    - {fileID: 11400000, guid: 6ba129f402bc93d4fb6ecd150fa19d8c, type: 2}
+    - {fileID: 11400000, guid: 26f4e41583b969e4aa8bb0ea84af2b6a, type: 2}
+    - {fileID: 11400000, guid: 443c716e7f167d04295d15a0625ff14f, type: 2}
+    - {fileID: 11400000, guid: 58b4306d568163444b93c49e48c2eb41, type: 2}
+    - {fileID: 11400000, guid: 74fcc049c441aac40859e336a78f840c, type: 2}
+    - {fileID: 11400000, guid: 07f989d65369f124e9aa261a661ed4da, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configsForAlly
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[ConfigBaseIndex,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: configsForEnermy
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[ConfigBaseIndex,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

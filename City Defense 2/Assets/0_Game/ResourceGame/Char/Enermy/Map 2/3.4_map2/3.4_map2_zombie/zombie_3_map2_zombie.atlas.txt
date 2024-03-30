@@ -1,0 +1,20 @@
+zombie_3_map2_zombie.png
+size:1060,640
+filter:Linear,Linear
+pma:true
+3.2/bang
+bounds:2,2,704,636
+offsets:48,29,871,676
+3.2/body
+bounds:708,256,348,382
+3.2/l arm
+bounds:708,82,116,98
+3.2/r hand
+bounds:708,82,116,98
+3.2/l leg
+bounds:826,90,68,90
+3.2/r leg
+bounds:826,90,68,90
+3.2/shadow
+bounds:708,182,244,72
+offsets:1,1,246,74

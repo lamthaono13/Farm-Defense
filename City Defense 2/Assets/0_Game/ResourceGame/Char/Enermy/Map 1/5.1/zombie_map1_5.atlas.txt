@@ -1,0 +1,32 @@
+zombie_map1_5.png
+size:356,1740
+filter:Linear,Linear
+pma:true
+body
+bounds:2,1384,351,351
+hat
+bounds:2,1159,312,223
+head
+bounds:2,922,273,235
+hip
+bounds:277,922,193,69
+rotate:90
+l arm
+bounds:139,67,158,213
+rotate:270
+l leg
+bounds:2,2,83,138
+rotate:90
+mouth1
+bounds:2,569,304,159
+mouth2
+bounds:2,730,291,190
+mouth_back
+bounds:2,377,251,190
+r arm
+bounds:2,106,179,225
+rotate:90
+r leg
+bounds:255,377,83,138
+shadow
+bounds:2,287,314,88

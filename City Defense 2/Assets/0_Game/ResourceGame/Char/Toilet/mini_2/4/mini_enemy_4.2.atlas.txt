@@ -1,0 +1,17 @@
+mini_enemy_4.2.png
+size:52,352
+filter:Linear,Linear
+pma:true
+scale:0.2
+mini/1/nap_1
+bounds:2,128,44,55
+mini/1/shadow
+bounds:25,2,65,15
+rotate:90
+mini/4.2/head_4
+bounds:2,259,46,90
+mini/4/back_4
+bounds:2,185,40,73
+mini/4/body_4
+bounds:2,66,60,43
+rotate:90

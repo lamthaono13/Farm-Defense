@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1726182683, guid: a4865f1ab4504ed8a368670db22f409c, type: 3}
+  m_Name: AOTGenerationConfig
+  m_EditorClassIdentifier: 
+  automateBeforeBuilds: 0
+  deleteDllAfterBuilds: 1
+  AutomateForAllAOTPlatforms: 1
+  automateForPlatforms: 0900000014000000
+  lastScan: 638344468040730292
+  supportSerializedTypes:
+  - TypeName: System.Boolean, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Buy, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: ConfigBaseIndex, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataCard, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataConfigForTypeChar, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataConfigIndexGrow, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataEachAnimation, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataEachMapRender, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataEachRewardStage, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataEachUnlock, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataEquipSlot, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataGrowConfigLevel, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataLevel, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataMap, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataSpecialObject, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataSqawn, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DataTurnEnermy, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DirectionSqawn, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: ElementGetGem, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: ElementGetGold, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: ElementGetSpecial, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: ElementGetTicket, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Single, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int32, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Buy, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[ConfigBaseIndex, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataEachAnimation, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataEachMapRender, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataEachRewardStage, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataEachUnlock, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataGrowConfigLevel, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataLevel, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataSpecialObject, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataSqawn, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[DataTurnEnermy, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[ElementGetGem, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[ElementGetGold, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[ElementGetSpecial, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[ElementGetTicket, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[ConfigBaseIndex,
+      Assembly-CSharp]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[DataEachUnlock,
+      Assembly-CSharp]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[ConfigBaseIndex,
+      Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[DataEachUnlock,
+      Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[UnityEngine.Sprite,
+      UnityEngine.CoreModule]], mscorlib]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[UnityEngine.Sprite,
+      UnityEngine.CoreModule]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[UiCardUnit,
+      Assembly-CSharp]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[UnityEngine.Sprite, UnityEngine.CoreModule]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[TypeEquip, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[UiCardUnit, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Sprite, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.String, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeAnimation, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeBuy, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeEquip, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeGroup, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeId, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeMap, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeShapeMap, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: TypeTier, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UiCardUnit, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Vector3, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1

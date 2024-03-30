@@ -1,0 +1,37 @@
+zombie_map2_3.png
+size:1224,644
+filter:Linear,Linear
+pma:true
+3.2/bang
+bounds:2,3,704,636
+offsets:48,29,871,676
+3.2/body
+bounds:708,257,348,382
+3.2/l arm
+bounds:1064,139,116,98
+rotate:90
+3.2/r hand
+bounds:1064,139,116,98
+rotate:90
+3.2/l leg
+bounds:1133,491,68,90
+3.2/r leg
+bounds:1133,491,68,90
+3.2/shadow
+bounds:990,11,244,72
+offsets:1,1,246,74
+rotate:90
+3.2/shield
+bounds:708,2,253,280
+rotate:90
+3.2/shield_broken1
+bounds:1064,32,84,105
+3.2/shield_broken2
+bounds:1058,257,112,131
+3.2/shield_broken3
+bounds:1058,491,73,98
+3.2/shield_broken4
+bounds:1150,64,73,72
+rotate:90
+3.2/shield_broken5
+bounds:1058,390,112,99

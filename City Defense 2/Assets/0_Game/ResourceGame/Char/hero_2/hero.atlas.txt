@@ -1,0 +1,71 @@
+hero.png
+size:2028,828
+filter:Linear,Linear
+pma:true
+backpack
+bounds:2,193,651,632
+offsets:21,1,674,634
+body
+bounds:1616,212,280,326
+offsets:1,2,282,330
+rotate:90
+body back
+bounds:655,306,519,481
+offsets:4,3,523,485
+rotate:90
+body front
+bounds:1138,306,519,476
+offsets:0,3,519,480
+rotate:90
+eye
+bounds:945,53,130,58
+offsets:1,1,132,60
+hat
+bounds:1594,67,321,143
+offsets:3,0,324,145
+hip
+bounds:2,39,292,152
+offsets:1,24,294,177
+l leg1
+bounds:1917,100,110,106
+offsets:2,2,113,109
+rotate:90
+r leg1
+bounds:1917,100,110,106
+offsets:2,2,113,109
+rotate:90
+l leg2
+bounds:1944,223,79,135
+offsets:1,1,81,138
+r leg2
+bounds:1944,223,79,135
+offsets:1,1,81,138
+l leg3
+bounds:1365,50,141,119
+offsets:2,1,144,121
+r leg3
+bounds:1365,50,141,119
+offsets:2,1,144,121
+l weapon
+bounds:945,113,316,191
+offsets:1,1,318,193
+r weapon
+bounds:945,113,316,191
+offsets:1,1,318,193
+shadow
+bounds:1944,360,465,72
+offsets:1,1,467,74
+rotate:90
+shoulder
+bounds:655,28,276,288
+offsets:1,2,279,292
+rotate:90
+storage
+bounds:1616,494,318,331
+offsets:1,1,320,333
+tube long
+bounds:1263,15,329,289
+tube short
+bounds:296,2,189,242
+offsets:1,0,191,242
+rotate:90

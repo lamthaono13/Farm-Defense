@@ -1,0 +1,59 @@
+zombie_map1_2.png
+size:176,176
+filter:Linear,Linear
+pma:true
+scale:0.2
+2.2/body
+bounds:67,106,55,68
+2.2/hat
+bounds:124,111,63,40
+rotate:90
+2.2/l arm
+bounds:89,3,15,25
+2.2/l leg
+bounds:106,2,13,19
+rotate:90
+2.2/r leg
+bounds:106,2,13,19
+rotate:90
+2/l leg
+bounds:106,2,13,19
+rotate:90
+2/r leg
+bounds:106,2,13,19
+rotate:90
+2.2/r arm
+bounds:26,2,23,21
+rotate:90
+2.2/shadow
+bounds:59,30,49,15
+2.3/shadow
+bounds:59,30,49,15
+2/shadow
+bounds:59,30,49,15
+2.2/weapon
+bounds:117,17,42,41
+2.3/body
+bounds:2,105,63,69
+2.3/l arm
+bounds:2,2,23,22
+rotate:90
+2.3/l leg
+bounds:127,2,13,19
+rotate:90
+2.3/r leg
+bounds:127,2,13,19
+rotate:90
+2.3/r arm
+bounds:72,2,15,26
+2.3/weapon
+bounds:59,47,56,56
+2/body
+bounds:2,27,55,76
+2/l arm
+bounds:156,84,15,25
+2/r arm
+bounds:49,2,23,21
+rotate:90
+2/weapon
+bounds:117,60,37,44

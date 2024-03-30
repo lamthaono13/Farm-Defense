@@ -1,0 +1,72 @@
+zombie_map1_5.png
+size:2048,496
+filter:Linear,Linear
+pma:true
+5.2/body
+bounds:2,106,348,388
+5.2/cap
+bounds:705,122,372,399
+rotate:90
+5.2/cap_back
+bounds:973,64,86,279
+rotate:90
+5.2/head
+bounds:1190,221,273,235
+rotate:90
+5/head
+bounds:1190,221,273,235
+rotate:90
+5.2/hip
+bounds:352,72,193,69
+5/hip
+bounds:352,72,193,69
+5.2/l arm
+bounds:610,2,158,213
+rotate:90
+5.2/l leg
+bounds:140,23,81,136
+rotate:90
+5.2/mouth1
+bounds:1619,190,304,159
+rotate:90
+5/mouth1
+bounds:1619,190,304,159
+rotate:90
+5.2/mouth2
+bounds:1427,203,291,190
+rotate:90
+5/mouth2
+bounds:1427,203,291,190
+rotate:90
+5.2/mouth_back
+bounds:1780,243,251,190
+rotate:90
+5/mouth_back
+bounds:1780,243,251,190
+rotate:90
+5.2/r arm
+bounds:1360,24,177,225
+rotate:270
+5.2/r leg
+bounds:2,23,81,136
+rotate:90
+5.2/shadow
+bounds:1106,131,314,88
+5/shadow
+bounds:1106,131,314,88
+5/body
+bounds:352,143,351,351
+5/hat
+bounds:876,271,312,223
+5/l arm
+bounds:1574,30,158,213
+rotate:90
+5/l leg
+bounds:1908,33,83,138
+rotate:90
+5/r arm
+bounds:1821,112,179,225
+rotate:270
+5/r leg
+bounds:825,37,83,138
+rotate:90

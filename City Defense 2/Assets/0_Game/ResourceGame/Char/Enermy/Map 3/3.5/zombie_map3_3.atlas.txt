@@ -1,0 +1,33 @@
+zombie_map3_3.png
+size:592,592
+filter:Linear,Linear
+pma:true
+3.3/body
+bounds:2,197,272,391
+3.3/hair
+bounds:484,10,97,70
+offsets:1,1,99,72
+3.3/l arm
+bounds:484,195,119,101
+offsets:1,1,121,103
+rotate:90
+3.3/r arm
+bounds:484,195,119,101
+offsets:1,1,121,103
+rotate:90
+3.3/l leg
+bounds:484,82,78,111
+3.3/r leg
+bounds:484,82,78,111
+3.3/l wing
+bounds:2,2,285,193
+3.3/r wing
+bounds:289,29,285,193
+rotate:90
+3.3/shadow
+bounds:500,344,244,72
+offsets:1,1,246,74
+rotate:90
+3.3/weapon
+bounds:276,316,222,272
+offsets:1,1,225,274

@@ -1,0 +1,16 @@
+9.mini_3_enemy2.png
+size:904,904
+filter:Linear,Linear
+pma:true
+mini/1/shadow
+bounds:2,45,325,72
+offsets:1,1,327,74
+mini_3/2/back
+bounds:418,2,302,447
+offsets:0,0,303,448
+rotate:90
+mini_3/2/body
+bounds:418,306,595,466
+rotate:90
+mini_3/2/head
+bounds:2,119,414,782

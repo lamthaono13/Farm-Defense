@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c46ed672292249fa8d244dd2e7a8541, type: 3}
+  m_Name: yadesheet Config Level
+  m_EditorClassIdentifier: 
+  data:
+    items:
+      keys: 0000000001000000020000000300000004000000
+      values:
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: Index Check
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: Index Scale
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.2
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: 3
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.4
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: 4
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 1.6
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 0000000001000000
+          values:
+          - rawValue: 
+            value: 5
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: 2
+            UnityObject: {fileID: 0}
+            UOs: []
+  columnHeaders:
+    items:
+      keys: 
+      values: []
+  VisualHeaders: 0

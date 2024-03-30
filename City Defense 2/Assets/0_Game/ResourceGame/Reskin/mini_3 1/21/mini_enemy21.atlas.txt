@@ -1,0 +1,17 @@
+mini_enemy21.png
+size:1132,1132
+filter:Linear,Linear
+pma:true
+mini/1.2/back_1
+bounds:658,73,329,470
+rotate:90
+mini/1.2/body_1
+bounds:2,65,320,170
+mini/1/shadow
+bounds:324,163,325,72
+offsets:1,1,327,74
+mini_3/21/body
+bounds:2,237,654,891
+mini_3/21/head
+bounds:658,404,411,724
+offsets:0,165,411,889

@@ -1,0 +1,372 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c46ed672292249fa8d244dd2e7a8541, type: 3}
+  m_Name: BulkImportConfig
+  m_EditorClassIdentifier: 
+  data:
+    items:
+      keys: 00000000010000000300000004000000050000000600000007000000090000000a0000000b0000000c000000140000001300000012000000110000000d000000
+      values:
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Stage/yadesheet
+              Stage.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: b03354325406d254dab0a02d43386a26, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Stage
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Stage/yadesheet
+              Config Level.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 54d486fd90e00d14b94e2350f0395bca, type: 2}
+            UOs: []
+          - rawValue: 
+            value: State Scale
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Ally/Barrier
+              Ally yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: e547f4051973dbb4f9fb1691a080bf17, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Barrier Ally Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Ally/Vanguard
+              Ally yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 6afd3f3a79531174a9ee1a183d53ecf5, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Vanguard Ally Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Ally/Sniper
+              Ally yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: ad15022be96c3f543b505b6ba5851907, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Sniper Ally Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Ally/Gunner
+              Ally yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 614d1c734106dbd4cb7553475d07b4f2, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Gunner Ally Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Ally/Oppressor
+              Ally yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 014c5453a5307d3498211556910dd762, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Oppressor Ally Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Enermy/Vanguard
+              Enermy yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 34d10589f220fde4691db51f4e40bab8, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Vanguard Enemy Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Enermy/Sniper
+              Enermy yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 9d746ae7f1a81a040a9dc256af5f6307, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Sniper Enemy Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Enermy/Gunner
+              Enermy yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: fedc01a536d204a49a844400fc38a035, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Gunner Enemy Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000030000000100000002000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Enermy/Oppressor
+              Enermy yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 3c23262248405374da01886c64523f27, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Oppressor Enemy Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000010000000200000003000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Shop/yadesheetShop.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: b0b7dc20c47f29940be132407fcb588e, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Shop
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000010000000200000003000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/RewardMap/yadesheetRewardMap.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: a983e77bb9c6b674e802093e6e370030, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Map_Reward
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000010000000200000003000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Quest/yadesheet
+              Quest.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 6102c7c7c14c3e74ebd1b96918a9894e, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Stage Quest
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 00000000010000000200000003000000
+          values:
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/SpecialIndex/yadesheetSpecialIndex.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: b5a0709dac152594e8929d2c42130f81, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Special Index
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+      - height: 25
+        cells:
+          keys: 03000000000000000100000002000000
+          values:
+          - rawValue: 
+            value: google
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: 
+            value: https://docs.google.com/spreadsheets/d/1TUJIyLskVaFgg_ObYY7u1JS5wJXbeBCA/edit#gid=988564608
+            UnityObject: {fileID: 0}
+            UOs: []
+          - rawValue: =ASSET("Assets/0_Game/ResourceGame/Address_Game/Sheet/Enermy/Boss
+              Enermy yadesheet.asset")
+            value: Yade.Runtime.YadeSheetData
+            UnityObject: {fileID: 11400000, guid: 0f823242d9b4c8b40ac78c2d8ee1b36f, type: 2}
+            UOs: []
+          - rawValue: 
+            value: Boss Enemy Stat
+            UnityObject: {fileID: 0}
+            UOs: []
+  columnHeaders:
+    items:
+      keys: 00000000010000000200000003000000
+      values:
+      - Width: 513
+        Alias: SourceUrl
+        Type: 0
+        Field: 
+      - Width: 355
+        Alias: SaveTo
+        Type: 0
+        Field: 
+      - Width: 211
+        Alias: SheetName
+        Type: 0
+        Field: 
+      - Width: 288
+        Alias: Type
+        Type: 0
+        Field: 
+  VisualHeaders: 1
