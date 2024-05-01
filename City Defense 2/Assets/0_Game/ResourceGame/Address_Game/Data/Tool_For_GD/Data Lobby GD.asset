@@ -29,7 +29,7 @@ MonoBehaviour:
       Data: 1|TypeEquip, Assembly-CSharp
     - Name: TypeGroup
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: TypeTier
       Entry: 3
       Data: 0
@@ -77,10 +77,10 @@ MonoBehaviour:
       Data: 5|TypeEquip, Assembly-CSharp
     - Name: TypeGroup
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: TypeTier
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: TypeId
       Entry: 3
       Data: 0

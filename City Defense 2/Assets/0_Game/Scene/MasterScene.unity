@@ -572,9 +572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85768eb0e31d974a8cf46ad93821a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGameDesign: 0
-  noTutorial: 0
-  isHack: 0
+  isGameDesign: 1
+  noTutorial: 1
+  isHack: 1
   objWifi: {fileID: 869571410}
   camera: {fileID: 1119702147}
   soundManager: {fileID: 4517277223582352673}
@@ -1862,6 +1862,10 @@ PrefabInstance:
     - target: {fileID: 4332360749869724161, guid: 4874780d6cfa5054e80cfd4efc643b12, type: 3}
       propertyPath: m_SizeDelta.y
       value: 323.5605
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534223172894436286, guid: 4874780d6cfa5054e80cfd4efc643b12, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5844245778220968294, guid: 4874780d6cfa5054e80cfd4efc643b12, type: 3}
       propertyPath: m_IsActive

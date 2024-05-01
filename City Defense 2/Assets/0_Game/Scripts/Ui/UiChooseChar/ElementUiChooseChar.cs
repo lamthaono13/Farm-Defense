@@ -71,7 +71,7 @@ public class ElementUiChooseChar : MonoBehaviour
 
         int levelAlly = GameManager.Instance.DataManager.GetLevelAlly(typeEquip.TypeGroup, typeEquip.TypeTier, typeEquip.TypeId);
 
-        numberSub = GameManager.Instance.DataManager.DataManagerMainGame.DataEnergy.DataEnergySub[typeGroup];
+        numberSub = GameManager.Instance.DataManager.DataManagerMainGame.GetConfigBaseIndex(typeEquip.TypeGroup, typeEquip.TypeTier, typeEquip.TypeId).dataConfigForTypeCharBase.Energy;
 
         textEnergy.text = numberSub.ToString();
 

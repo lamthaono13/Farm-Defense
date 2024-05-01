@@ -45,6 +45,11 @@ public class BoomControl : MonoBehaviour
         }
 
         btnBoom.onClick.AddListener(OnClickBtnBoom);
+
+        if (GameManager.Instance.IsGameDesign)
+        {
+            btnBoom.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -213,7 +218,7 @@ public class BoomControl : MonoBehaviour
                 continue;
             }
 
-            var screenPos = Camera.main.WorldToScreenPoint(enermy[i].GetBody().position / 15 * 5);
+            var screenPos = Camera.main.WorldToScreenPoint(enermy[i].GetBody().position / LevelManagerMainGame.Instance.BaseCamera * 5);
             var onScreen = screenPos.x > 0f && screenPos.x < Screen.width && screenPos.y > 0f && screenPos.y < Screen.height;
 
 

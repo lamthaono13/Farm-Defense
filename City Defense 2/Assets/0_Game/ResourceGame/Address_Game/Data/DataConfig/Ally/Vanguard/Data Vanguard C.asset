@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|DataConfigForTypeChar, Assembly-CSharp
     - Name: Energy
       Entry: 3
-      Data: 10
+      Data: 30
     - Name: Damage
       Entry: 4
       Data: 50
@@ -74,7 +74,7 @@ MonoBehaviour:
       Data: 1|DataConfigIndexGrow, Assembly-CSharp
     - Name: AttackGrow
       Entry: 4
-      Data: 14.4
+      Data: 15
     - Name: HPGrow
       Entry: 4
       Data: 25

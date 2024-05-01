@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LevelManagerMainGame : LevelManager<LevelManagerMainGame>
 {
+    [SerializeField] private float baseCamera;
+
     [SerializeField] protected float timeWaitLoadDataDone;
 
     [SerializeField] protected UiManagerMainGame _uiManagerMainGame;
@@ -26,6 +28,8 @@ public class LevelManagerMainGame : LevelManager<LevelManagerMainGame>
     public UiManagerMainGame UiManagerMainGame => _uiManagerMainGame;
 
     public QuestManager QuestManager => questManager;
+
+    public float BaseCamera => baseCamera;
 
     private DataLevel dataLevel;
 

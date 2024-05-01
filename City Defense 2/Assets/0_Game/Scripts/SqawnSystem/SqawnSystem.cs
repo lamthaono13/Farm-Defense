@@ -1,4 +1,4 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +39,8 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
 
     //[SerializeField] private GameObject objCoroutine;
 
+    [SerializeField] private float baseCamera;
+
     [SerializeField] private GameObject objNewSqawn;
 
     private float timeDelay;
@@ -77,8 +79,11 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
         }
 
         listPosition = new List<Vector3>();
-        
-        StartCoroutine(WaitSqawnEnermyInitialGame());
+
+        if (!GameManager.Instance.IsGameDesign)
+        {
+            StartCoroutine(WaitSqawnEnermyInitialGame());
+        }
     }
 
     [Button]
@@ -86,13 +91,13 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
     {
         Debug.Log("Enermy/" + typeGroup.ToString() + "/" + typeGroup.ToString() + " Enermy " + typeTier.ToString());
 
-        GameObject objLoad = ResourceManager.Instance.Load("Enermy/" + typeGroup.ToString() + "/" + typeGroup.ToString() + " Enermy " + typeTier.ToString()); //Resources.Load<GameObject>("Enermy/" + typeGroup.ToString() + "/" + typeGroup.ToString() + " Enermy " + typeTier.ToString());
+        GameObject objLoad = ResourceManager.Instance.Load("Enermy/" + typeGroup.ToString() + "/" + ((int)typeGroup + 1).ToString() + "00" + ((int)typeTier + 1).ToString()); //Resources.Load<GameObject>("Enermy/" + typeGroup.ToString() + "/" + typeGroup.ToString() + " Enermy " + typeTier.ToString());
 
         GameObject objEnermy = Instantiate(objLoad, positionSqawn, Quaternion.Euler(-90, 0, 0));
 
         CharacterBase characterBase = objEnermy.GetComponent<CharacterBase>();
 
-        characterBase.InitIndexConfig(new DataSqawn() { level = 1 });
+        characterBase.InitIndexConfig(new DataSqawn() { level = 1 , PostionSqawn = positionSqawn});
 
         CharManager.Instance.AddEnermyNeedToWin();
 
@@ -152,7 +157,7 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
             {
                 try
                 {
-                    int a = (int)Char.GetNumericValue(dataSqawns[0].IdEnermy.ToString()[0]) - 1;
+                    int a = (int)System.Char.GetNumericValue(dataSqawns[0].IdEnermy.ToString()[0]) - 1;
 
                     TypeGroup typeGroupEnermySqawn = (TypeGroup)a;
 
@@ -289,15 +294,37 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SqawnIdEnermy(TypeGroup.Vanguard, TypeTier.C, RandomPosition(DirectionSqawn.Left));
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SqawnIdEnermy(TypeGroup.Vanguard, TypeTier.B, RandomPosition(DirectionSqawn.Right));
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SqawnIdEnermy(TypeGroup.Sniper, TypeTier.C, RandomPosition(DirectionSqawn.Staight));
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SqawnIdEnermy(TypeGroup.Gunner, TypeTier.C, RandomPosition(DirectionSqawn.Staight));
+        }
+
         if (canSqawn && isTouching)
         {
+
+
             if (Input.GetMouseButton(0))
             {
-                Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15;
+                Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera;
 
                 //RaycastHit2D raycastHit = Physics2D.Raycast(u, Input.mousePosition);
 
-                currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15;
+                currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera;
 
                 SqawnFollowLine();
 
@@ -330,6 +357,31 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
                 //    Sqawn(new Vector3(u.x, u.y, 0));
                 //}
             }
+        }
+    }
+
+    public Vector3 RandomPosition(DirectionSqawn directionSqawn)
+    {
+        switch (directionSqawn)
+        {
+            case DirectionSqawn.Staight:
+
+                return new Vector3(Random.Range(-2.8f, 2.8f), Random.Range(15f, 30f), 0);
+
+                //break;
+            case DirectionSqawn.Left:
+
+                return new Vector3(Random.Range(-10f, -20f), Random.Range(2.5f, 6.5f), 0);
+
+                //break;
+            case DirectionSqawn.Right:
+
+                return new Vector3(Random.Range(10f, 20f), Random.Range(2.5f, 6.5f), 0);
+
+            //break;
+
+            default:
+                return Vector3.zero;
         }
     }
 
@@ -701,7 +753,7 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
         if (canSqawn)
         {
             isTouching = true;
-            passPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15;
+            passPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera;
 
         }
 
@@ -709,7 +761,7 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
         {
             if (Input.GetMouseButton(0))
             {
-                Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15;
+                Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera;
 
                 //RaycastHit2D raycastHit = Physics2D.Raycast(u, Input.mousePosition);
 
@@ -753,7 +805,7 @@ public class SqawnSystem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandl
     public void OnPointerMove(PointerEventData eventData)
     {
         if(canSqawn && isTouching)
-        listPosition.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15);
+        listPosition.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera);
 
         if (canSqawn && isTouching)
         {

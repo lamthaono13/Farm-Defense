@@ -36,7 +36,7 @@ public class DronEnergy : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * 15;
+            Vector3 u = Camera.main.ScreenToWorldPoint(Input.mousePosition) / 5 * LevelManagerMainGame.Instance.BaseCamera;
 
             RaycastHit2D raycastHit = Physics2D.Raycast(u, Input.mousePosition);
 

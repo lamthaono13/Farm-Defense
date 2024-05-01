@@ -28,6 +28,12 @@ public class EnergyManager : MonoBehaviour, ISingleton
 
     private bool hasFisrtEarnEnergy;
 
+    [SerializeField] private int energyAddPerSecond;
+
+    private bool canAddEnergy;
+
+    private float countSecond;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +43,19 @@ public class EnergyManager : MonoBehaviour, ISingleton
     // Update is called once per frame
     void Update()
     {
-        
+        if (canAddEnergy)
+        {
+            if(countSecond >= 1)
+            {
+                AddEnergy(energyAddPerSecond);
+
+                countSecond = 0;
+            }
+            else
+            {
+                countSecond += Time.deltaTime;
+            }
+        }
     }
 
     public void InitSingleton()
@@ -99,6 +117,10 @@ public class EnergyManager : MonoBehaviour, ISingleton
         uiEnergy.Init();
 
         OnChangeEnergy?.Invoke(currentEnergy, energyMax, false);
+
+        canAddEnergy = true;
+
+        countSecond = 0;
     }
 
     public void AddEnergy(int numberAdd)
@@ -177,6 +199,11 @@ public class EnergyManager : MonoBehaviour, ISingleton
 
     public void SubEnergy(int numberSub)
     {
+        //if (GameManager.Instance.IsGameDesign)
+        //{
+        //    return;
+        //}
+
         int u = currentEnergy - numberSub;
 
         if (u < 0)

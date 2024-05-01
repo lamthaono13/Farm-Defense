@@ -52,6 +52,13 @@ public class ObjectManager : MonoBehaviour, ISingleton
 
         int idTypeMap = (int)dataMap.TypeShapeMap;
 
+        if (GameManager.Instance.IsGameDesign)
+        {
+            idTypeMap = 0;
+
+            idMap = 1;
+        }
+
         //Debug.LogError((idMap + 1).ToString());
 
 

@@ -72,7 +72,7 @@ MonoBehaviour:
       Data: 2
     - Name: NameAnimtion
       Entry: 1
-      Data: attack
+      Data: dead
     - Name: NameEvent
       Entry: 1
       Data: attack
@@ -90,10 +90,10 @@ MonoBehaviour:
       Data: 3
     - Name: NameAnimtion
       Entry: 1
-      Data: dead2
+      Data: dead
     - Name: NameEvent
       Entry: 1
-      Data: dead
+      Data: attack
     - Name: speedAnimBase
       Entry: 4
       Data: 1

@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 7
       Data: 1|DataEachAnimation, Assembly-CSharp
@@ -38,7 +38,7 @@ MonoBehaviour:
       Entry: 1
       Data: idle
     - Name: NameEvent
-      Entry: 1
+      Entry: 6
       Data: 
     - Name: speedAnimBase
       Entry: 4
@@ -78,7 +78,7 @@ MonoBehaviour:
       Data: attack
     - Name: speedAnimBase
       Entry: 4
-      Data: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -89,7 +89,7 @@ MonoBehaviour:
       Entry: 3
       Data: 3
     - Name: NameAnimtion
-      Entry: 1
+      Entry: 6
       Data: 
     - Name: NameEvent
       Entry: 6
@@ -163,6 +163,60 @@ MonoBehaviour:
     - Name: NameAnimtion
       Entry: 1
       Data: dead
+    - Name: NameEvent
+      Entry: 1
+      Data: dead
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 8
+    - Name: NameAnimtion
+      Entry: 1
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 9
+    - Name: NameAnimtion
+      Entry: 6
+      Data: 
+    - Name: NameEvent
+      Entry: 6
+      Data: 
+    - Name: speedAnimBase
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|DataEachAnimation, Assembly-CSharp
+    - Name: TypeAnimation
+      Entry: 3
+      Data: 10
+    - Name: NameAnimtion
+      Entry: 1
+      Data: jump
     - Name: NameEvent
       Entry: 6
       Data: 

@@ -32,6 +32,11 @@ public class HealthGamePlay : MonoBehaviour, ISingleton
 
     public void SubHealth()
     {
+        if (GameManager.Instance.IsGameDesign)
+        {
+            return;
+        }
+
         currentHealth--;
 
         if(currentHealth <= 0)

@@ -36,7 +36,7 @@ MonoBehaviour:
       Data: 0
     - Name: NameAnimtion
       Entry: 1
-      Data: idle_1_3
+      Data: idle
     - Name: NameEvent
       Entry: 6
       Data: 
@@ -54,7 +54,7 @@ MonoBehaviour:
       Data: 1
     - Name: NameAnimtion
       Entry: 1
-      Data: run_1_3
+      Data: run_1
     - Name: NameEvent
       Entry: 6
       Data: 
@@ -72,13 +72,13 @@ MonoBehaviour:
       Data: 2
     - Name: NameAnimtion
       Entry: 1
-      Data: attack_1_2
+      Data: attack_1
     - Name: NameEvent
       Entry: 1
       Data: attack
     - Name: speedAnimBase
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -164,8 +164,8 @@ MonoBehaviour:
       Entry: 1
       Data: dead
     - Name: NameEvent
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: dead
     - Name: speedAnimBase
       Entry: 4
       Data: 1

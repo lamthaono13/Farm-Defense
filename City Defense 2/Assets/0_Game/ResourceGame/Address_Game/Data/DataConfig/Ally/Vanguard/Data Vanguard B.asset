@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|DataConfigForTypeChar, Assembly-CSharp
     - Name: Energy
       Entry: 3
-      Data: 10
+      Data: 40
     - Name: Damage
       Entry: 4
       Data: 200
@@ -50,7 +50,7 @@ MonoBehaviour:
       Data: 1
     - Name: Name
       Entry: 1
-      Data: Poilice
+      Data: Police
     - Name: Description
       Entry: 1
       Data: Brave policemen with excellent defense abilities. Be careful with the
@@ -60,13 +60,13 @@ MonoBehaviour:
       Data: When destroyed, return 1/2 Stamina summon this troops.
     - Name: levelConditionUnlockGold
       Entry: 3
-      Data: 10
+      Data: 20
     - Name: goldUnlock
       Entry: 3
-      Data: 1000
+      Data: 5000
     - Name: stringDesUnlockGold
       Entry: 1
-      Data: Traffic Cone level 10 to Unlock
+      Data: Thug level 20 to Unlock
     - Name: 
       Entry: 8
       Data: 
@@ -75,10 +75,10 @@ MonoBehaviour:
       Data: 1|DataConfigIndexGrow, Assembly-CSharp
     - Name: AttackGrow
       Entry: 4
-      Data: 20
+      Data: 30
     - Name: HPGrow
       Entry: 4
-      Data: 80
+      Data: 100
     - Name: AttackSpeedGrow
       Entry: 4
       Data: 0

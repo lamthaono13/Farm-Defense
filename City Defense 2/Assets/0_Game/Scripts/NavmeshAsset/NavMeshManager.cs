@@ -29,6 +29,10 @@ public class NavMeshManager : MonoBehaviour
         //{
         //    objsBake[i].gameObject.SetActive(true);
         //}
+        if (GameManager.Instance.IsGameDesign)
+        {
+            idShape = 0;
+        }
 
         GameObject objLoad = Resources.Load<GameObject>("Navmesh/Navmesh Shape " + (idShape + 1).ToString());
 

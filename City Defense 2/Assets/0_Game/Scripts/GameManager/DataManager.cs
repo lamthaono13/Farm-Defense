@@ -182,10 +182,34 @@ public class DataManager : MonoBehaviour
     {
         TypeEquip defaultTypeEquip = new TypeEquip()
         {
-            TypeGroup = TypeGroup.Barrier,
+            TypeGroup = TypeGroup.Vanguard,
             TypeTier = TypeTier.C,
             TypeId = TypeId.Id0
         };
+
+        if (GameManager.Instance.IsGameDesign)
+        {
+            switch (typeSlotEquip)
+            {
+                case TypeSlotEquip.Slot1:
+
+                    defaultTypeEquip.TypeTier = TypeTier.C;
+
+                    break;
+                case TypeSlotEquip.Slot2:
+
+                    defaultTypeEquip.TypeTier = TypeTier.B;
+
+                    break;
+                case TypeSlotEquip.Slot3:
+
+                    defaultTypeEquip.TypeTier = TypeTier.C;
+
+                    break;
+            }
+
+            return defaultTypeEquip;
+        }
 
         switch (typeSlotEquip)
         {

@@ -99,6 +99,11 @@ public class CharManager : MonoBehaviour, ISingleton
 
     public void CheckWin()
     {
+        if (GameManager.Instance.IsGameDesign)
+        {
+            return;
+        }
+
         if(numberEnermyDie >= numberEnermyDieNeedToWin)
         {
             // Win

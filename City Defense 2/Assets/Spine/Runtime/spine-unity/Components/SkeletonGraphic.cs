@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated September 24, 2021. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2021, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -34,6 +34,8 @@
 #if UNITY_2018_2_OR_NEWER
 #define HAS_CULL_TRANSPARENT_MESH
 #endif
+
+#define SPINE_OPTIONAL_ON_DEMAND_LOADING
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,6 +59,13 @@ namespace Spine.Unity {
 		public Material additiveMaterial;
 		public Material multiplyMaterial;
 		public Material screenMaterial;
+
+		/// <summary>Own color to replace <c>Graphic.m_Color</c>.</summary>
+		[UnityEngine.Serialization.FormerlySerializedAs("m_Color")]
+		[SerializeField] protected Color m_SkeletonColor = Color.white;
+		/// <summary>Sets the color of the skeleton. Does not call <see cref="Rebuild"/> and <see cref="UpdateMesh"/>
+		/// unnecessarily as <c>Graphic.color</c> would otherwise do.</summary>
+		override public Color color { get { return m_SkeletonColor; } set { m_SkeletonColor = value; } }
 
 		[SpineSkin(dataField: "skeletonDataAsset", defaultAsEmptyString: true)]
 		public string initialSkinName;
@@ -119,7 +128,6 @@ namespace Spine.Unity {
 		public bool updateSeparatorPartScale = false;
 
 		private bool wasUpdatedAfterInit = true;
-		private bool requiresInstructionUpate = true;
 		private Texture baseTexture = null;
 
 #if UNITY_EDITOR
@@ -313,7 +321,7 @@ namespace Spine.Unity {
 			if (!this.IsValid) return;
 			if (canvasRenderer.cull) return;
 			if (update == CanvasUpdate.PreRender) {
-				if (requiresInstructionUpate) PrepareInstructionsAndRenderers(isInRebuild: true);
+				PrepareInstructionsAndRenderers(isInRebuild: true);
 				UpdateMeshToInstructions();
 			}
 			if (allowMultipleCanvasRenderers) canvasRenderer.Clear();
@@ -351,10 +359,8 @@ namespace Spine.Unity {
 				return;
 			UpdateAnimationStatus(deltaTime);
 
-			if (updateMode == UpdateMode.OnlyAnimationStatus) {
-				state.ApplyEventTimelinesOnly(skeleton, issueEvents: false);
+			if (updateMode == UpdateMode.OnlyAnimationStatus)
 				return;
-			}
 			ApplyAnimation();
 		}
 
@@ -379,9 +385,64 @@ namespace Spine.Unity {
 		protected void UpdateAnimationStatus (float deltaTime) {
 			deltaTime *= timeScale;
 			state.Update(deltaTime);
+			skeleton.Update(deltaTime);
+
+			ApplyTransformMovementToPhysics();
+
+			if (updateMode == UpdateMode.OnlyAnimationStatus) {
+				state.ApplyEventTimelinesOnly(skeleton, issueEvents: false);
+				return;
+			}
 		}
 
-		protected void ApplyAnimation () {
+		public virtual void ApplyTransformMovementToPhysics () {
+			if (Application.isPlaying) {
+				if (physicsPositionInheritanceFactor != Vector2.zero) {
+					Vector2 position = GetPhysicsTransformPosition();
+					Vector2 positionDelta = (position - lastPosition) / meshScale;
+					if (physicsMovementRelativeTo != null) {
+						positionDelta.x *= physicsMovementRelativeTo.lossyScale.x;
+						positionDelta.y *= physicsMovementRelativeTo.lossyScale.y;
+					}
+					positionDelta.x *= physicsPositionInheritanceFactor.x / transform.lossyScale.x;
+					positionDelta.y *= physicsPositionInheritanceFactor.y / transform.lossyScale.y;
+
+					skeleton.PhysicsTranslate(positionDelta.x, positionDelta.y);
+					lastPosition = position;
+				}
+				if (physicsRotationInheritanceFactor != 0f) {
+					float rotation = GetPhysicsTransformRotation();
+					skeleton.PhysicsRotate(0, 0, physicsRotationInheritanceFactor * (rotation - lastRotation));
+					lastRotation = rotation;
+				}
+			}
+		}
+
+		protected Vector2 GetPhysicsTransformPosition () {
+			if (physicsMovementRelativeTo == null) {
+				return transform.position;
+			} else {
+				if (physicsMovementRelativeTo == transform.parent)
+					return transform.localPosition;
+				else
+					return physicsMovementRelativeTo.InverseTransformPoint(transform.position);
+			}
+		}
+
+		protected float GetPhysicsTransformRotation () {
+			if (physicsMovementRelativeTo == null) {
+				return this.transform.rotation.eulerAngles.z;
+			} else {
+				if (physicsMovementRelativeTo == this.transform.parent)
+					return this.transform.localRotation.eulerAngles.z;
+				else {
+					Quaternion relative = Quaternion.Inverse(physicsMovementRelativeTo.rotation) * this.transform.rotation;
+					return relative.eulerAngles.z;
+				}
+			}
+		}
+
+		public virtual void ApplyAnimation () {
 			if (BeforeApply != null)
 				BeforeApply(this);
 
@@ -393,19 +454,24 @@ namespace Spine.Unity {
 			AfterAnimationApplied();
 		}
 
-		public void AfterAnimationApplied () {
+		public virtual void AfterAnimationApplied () {
 			if (UpdateLocal != null)
 				UpdateLocal(this);
 
-			skeleton.UpdateWorldTransform();
-
-			if (UpdateWorld != null) {
+			if (UpdateWorld == null) {
+				UpdateWorldTransform(Skeleton.Physics.Update);
+			} else {
+				UpdateWorldTransform(Skeleton.Physics.Pose);
 				UpdateWorld(this);
-				skeleton.UpdateWorldTransform();
+				UpdateWorldTransform(Skeleton.Physics.Update);
 			}
 
 			if (UpdateComplete != null)
 				UpdateComplete(this);
+		}
+
+		protected void UpdateWorldTransform (Skeleton.Physics physics) {
+			skeleton.UpdateWorldTransform(physics);
 		}
 
 		public void LateUpdate () {
@@ -415,9 +481,10 @@ namespace Spine.Unity {
 			if (freeze) return;
 			if (updateMode != UpdateMode.FullUpdate) return;
 
-			PrepareInstructionsAndRenderers();
+			if (updateTiming == UpdateTiming.InLateUpdate)
+				Update(unscaledTime ? Time.unscaledDeltaTime : Time.deltaTime);
 
-			SetVerticesDirty(); // triggers Rebuild and avoids potential double-update in a single frame
+			UpdateMesh();
 		}
 
 		protected void OnCullStateChanged (bool culled) {
@@ -460,14 +527,13 @@ namespace Spine.Unity {
 
 		#region API
 		protected Skeleton skeleton;
+
 		public Skeleton Skeleton {
 			get {
 				Initialize(false);
-				requiresInstructionUpate = true;
 				return skeleton;
 			}
 			set {
-				requiresInstructionUpate = true;
 				skeleton = value;
 			}
 		}
@@ -504,6 +570,73 @@ namespace Spine.Unity {
 			}
 		}
 
+		/// <seealso cref="PhysicsPositionInheritanceFactor"/>
+		[SerializeField] protected Vector2 physicsPositionInheritanceFactor = Vector2.one;
+		/// <seealso cref="PhysicsRotationInheritanceFactor"/>
+		[SerializeField] protected float physicsRotationInheritanceFactor = 1.0f;
+		/// <summary>Reference transform relative to which physics movement will be calculated, or null to use world location.</summary>
+		[SerializeField] protected Transform physicsMovementRelativeTo = null;
+
+		/// <summary>Used for applying Transform translation to skeleton PhysicsConstraints.</summary>
+		protected Vector2 lastPosition;
+		/// <summary>Used for applying Transform rotation to skeleton PhysicsConstraints.</summary>
+		protected float lastRotation;
+
+		/// <summary>When set to non-zero, Transform position movement in X and Y direction
+		/// is applied to skeleton PhysicsConstraints, multiplied by this scale factor.
+		/// Typical values are <c>Vector2.one</c> to apply XY movement 1:1,
+		/// <c>Vector2(2f, 2f)</c> to apply movement with double intensity,
+		/// <c>Vector2(1f, 0f)</c> to apply only horizontal movement, or
+		/// <c>Vector2.zero</c> to not apply any Transform position movement at all.</summary>
+		public Vector2 PhysicsPositionInheritanceFactor {
+			get {
+				return physicsPositionInheritanceFactor;
+			}
+			set {
+				if (physicsPositionInheritanceFactor == Vector2.zero && value != Vector2.zero) ResetLastPosition();
+				physicsPositionInheritanceFactor = value;
+			}
+		}
+
+		/// <summary>When set to non-zero, Transform rotation movement is applied to skeleton PhysicsConstraints,
+		/// multiplied by this scale factor. Typical values are <c>1</c> to apply movement 1:1,
+		/// <c>2</c> to apply movement with double intensity, or
+		/// <c>0</c> to not apply any Transform rotation movement at all.</summary>
+		public float PhysicsRotationInheritanceFactor {
+			get {
+				return physicsRotationInheritanceFactor;
+			}
+			set {
+				if (physicsRotationInheritanceFactor == 0f && value != 0f) ResetLastRotation();
+				physicsRotationInheritanceFactor = value;
+			}
+		}
+
+		/// <summary>Reference transform relative to which physics movement will be calculated, or null to use world location.</summary>
+		public Transform PhysicsMovementRelativeTo {
+			get {
+				return physicsMovementRelativeTo;
+			}
+			set {
+				physicsMovementRelativeTo = value;
+				if (physicsPositionInheritanceFactor != Vector2.zero) ResetLastPosition();
+				if (physicsRotationInheritanceFactor != 0f) ResetLastRotation();
+			}
+		}
+
+		public void ResetLastPosition () {
+			lastPosition = GetPhysicsTransformPosition();
+		}
+
+		public void ResetLastRotation () {
+			lastRotation = GetPhysicsTransformRotation();
+		}
+
+		public void ResetLastPositionAndRotation () {
+			lastPosition = GetPhysicsTransformPosition();
+			lastRotation = GetPhysicsTransformRotation();
+		}
+
 		[SerializeField] protected Spine.Unity.MeshGenerator meshGenerator = new MeshGenerator();
 		public Spine.Unity.MeshGenerator MeshGenerator { get { return this.meshGenerator; } }
 		DoubleBuffered<Spine.Unity.MeshRendererBuffers.SmartMesh> meshBuffers;
@@ -535,7 +668,7 @@ namespace Spine.Unity {
 			if (mesh == null) {
 				return false;
 			}
-			if (mesh.vertexCount == 0) {
+			if (mesh.vertexCount == 0 || mesh.bounds.size == Vector3.zero) {
 				this.rectTransform.sizeDelta = new Vector2(50f, 50f);
 				this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
 				return false;
@@ -567,7 +700,7 @@ namespace Spine.Unity {
 				}
 			}
 
-			if (!anyBoundsAdded) {
+			if (!anyBoundsAdded || combinedBounds.size == Vector3.zero) {
 				this.rectTransform.sizeDelta = new Vector2(50f, 50f);
 				this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
 				return false;
@@ -588,21 +721,34 @@ namespace Spine.Unity {
 			SetRectTransformSize(this, size);
 			this.rectTransform.pivot = p;
 
+			foreach (Transform separatorPart in separatorParts) {
+				RectTransform separatorTransform = separatorPart.GetComponent<RectTransform>();
+				if (separatorTransform) {
+					SetRectTransformSize(separatorTransform, size);
+					separatorTransform.pivot = p;
+				}
+			}
 			foreach (SkeletonSubmeshGraphic submeshGraphic in submeshGraphics) {
 				SetRectTransformSize(submeshGraphic, size);
 				submeshGraphic.rectTransform.pivot = p;
 			}
+
+			this.referenceSize = size;
 		}
 
 		public static void SetRectTransformSize (Graphic target, Vector2 size) {
+			SetRectTransformSize(target.rectTransform, size);
+		}
+
+		public static void SetRectTransformSize (RectTransform targetRectTransform, Vector2 size) {
 			Vector2 parentSize = Vector2.zero;
-			if (target.rectTransform.parent != null) {
-				RectTransform parentTransform = target.rectTransform.parent.GetComponent<RectTransform>();
+			if (targetRectTransform.parent != null) {
+				RectTransform parentTransform = targetRectTransform.parent.GetComponent<RectTransform>();
 				if (parentTransform)
 					parentSize = parentTransform.rect.size;
 			}
-			Vector2 anchorAreaSize = Vector2.Scale(target.rectTransform.anchorMax - target.rectTransform.anchorMin, parentSize);
-			target.rectTransform.sizeDelta = size - anchorAreaSize;
+			Vector2 anchorAreaSize = Vector2.Scale(targetRectTransform.anchorMax - targetRectTransform.anchorMin, parentSize);
+			targetRectTransform.sizeDelta = size - anchorAreaSize;
 		}
 
 		/// <summary>OnAnimationRebuild is raised after the SkeletonAnimation component is successfully initialized.</summary>
@@ -670,6 +816,8 @@ namespace Spine.Unity {
 			baseTexture = skeletonDataAsset.atlasAssets[0].PrimaryMaterial.mainTexture;
 			canvasRenderer.SetTexture(this.mainTexture); // Needed for overwriting initializations.
 
+			ResetLastPositionAndRotation();
+
 			// Set the initial Skin and Animation
 			if (!string.IsNullOrEmpty(initialSkinName))
 				skeleton.SetSkin(initialSkinName);
@@ -704,7 +852,6 @@ namespace Spine.Unity {
 		}
 
 		public void PrepareInstructionsAndRenderers (bool isInRebuild = false) {
-			requiresInstructionUpate = false;
 			if (!this.allowMultipleCanvasRenderers) {
 				MeshGenerator.GenerateSingleSubmeshInstruction(currentInstructions, skeleton, null);
 				if (canvasRenderers.Count > 0)
@@ -807,14 +954,22 @@ namespace Spine.Unity {
 			else
 				canvasRenderer.SetMesh(null);
 
+			bool assignTexture = false;
 			if (currentInstructions.submeshInstructions.Count > 0) {
 				Material material = currentInstructions.submeshInstructions.Items[0].material;
 				if (material != null && baseTexture != material.mainTexture) {
 					baseTexture = material.mainTexture;
 					if (overrideTexture == null && assignAtCanvasRenderer)
-						canvasRenderer.SetTexture(this.mainTexture);
+						assignTexture = true;
 				}
 			}
+
+#if SPINE_OPTIONAL_ON_DEMAND_LOADING
+			if (Application.isPlaying)
+				HandleOnDemandLoading();
+#endif
+			if (assignTexture)
+				canvasRenderer.SetTexture(this.mainTexture);
 		}
 
 		protected void UpdateMaterialsMultipleCanvasRenderers (SkeletonRendererInstruction currentInstructions) {
@@ -831,6 +986,11 @@ namespace Spine.Unity {
 				SubmeshInstruction submeshInstructionItem = currentInstructions.submeshInstructions.Items[i];
 				Material submeshMaterial = submeshInstructionItem.material;
 				if (useOriginalTextureAndMaterial) {
+					if (submeshMaterial == null) {
+						usedMaterialItems[i] = null;
+						usedTextureItems[i] = null;
+						continue;
+					}
 					usedTextureItems[i] = submeshMaterial.mainTexture;
 					if (!hasBlendModeMaterials) {
 						usedMaterialItems[i] = this.materialForRendering;
@@ -880,7 +1040,6 @@ namespace Spine.Unity {
 			bool pmaVertexColors = meshGenerator.settings.pmaVertexColors;
 			Material[] usedMaterialItems = usedMaterials.Items;
 			Texture[] usedTextureItems = usedTextures.Items;
-			bool assignAtCanvasRenderer = (assignMeshOverrideSingle == null || !disableMeshAssignmentOnOverride);
 			for (int i = 0; i < submeshCount; i++) {
 				SubmeshInstruction submeshInstructionItem = currentInstructions.submeshInstructions.Items[i];
 				meshGenerator.Begin();
@@ -913,12 +1072,49 @@ namespace Spine.Unity {
 #endif
 				}
 				canvasRenderer.materialCount = 1;
-				if (assignAtCanvasRenderer)
-					canvasRenderer.SetMaterial(usedMaterialItems[i], usedTextureItems[i]);
 			}
+
+#if SPINE_OPTIONAL_ON_DEMAND_LOADING
+			if (Application.isPlaying)
+				HandleOnDemandLoading();
+#endif
+			bool assignAtCanvasRenderer = (assignMeshOverrideSingle == null || !disableMeshAssignmentOnOverride);
+			if (assignAtCanvasRenderer) {
+				for (int i = 0; i < submeshCount; i++) {
+					CanvasRenderer canvasRenderer = canvasRenderers[i];
+					canvasRenderer.SetMaterial(usedMaterialItems[i], usedTextureItems[i]);
+				}
+			}
+
 			if (assignMeshOverrideMultiple != null)
 				assignMeshOverrideMultiple(submeshCount, meshesItems, usedMaterialItems, usedTextureItems);
 		}
+
+#if SPINE_OPTIONAL_ON_DEMAND_LOADING
+		void HandleOnDemandLoading () {
+			foreach (AtlasAssetBase atlasAsset in skeletonDataAsset.atlasAssets) {
+				if (atlasAsset.TextureLoadingMode != AtlasAssetBase.LoadingMode.Normal) {
+					atlasAsset.BeginCustomTextureLoading();
+
+					if (!this.allowMultipleCanvasRenderers) {
+						Texture loadedTexture = null;
+						atlasAsset.RequireTextureLoaded(this.mainTexture, ref loadedTexture, null);
+						if (loadedTexture)
+							this.baseTexture = loadedTexture;
+					} else {
+						Texture[] textureItems = usedTextures.Items;
+						for (int i = 0, count = usedTextures.Count; i < count; ++i) {
+							Texture loadedTexture = null;
+							atlasAsset.RequireTextureLoaded(textureItems[i], ref loadedTexture, null);
+							if (loadedTexture)
+								usedTextures.Items[i] = loadedTexture;
+						}
+					}
+					atlasAsset.EndCustomTextureLoading();
+				}
+			}
+		}
+#endif
 
 		protected void EnsureCanvasRendererCount (int targetCount) {
 #if UNITY_EDITOR
@@ -934,6 +1130,10 @@ namespace Spine.Unity {
 				SkeletonSubmeshGraphic submeshGraphic = go.AddComponent<SkeletonSubmeshGraphic>();
 				submeshGraphic.maskable = this.maskable;
 				submeshGraphic.raycastTarget = false;
+				submeshGraphic.rectTransform.pivot = rectTransform.pivot;
+				submeshGraphic.rectTransform.anchorMin = Vector2.zero;
+				submeshGraphic.rectTransform.anchorMax = Vector2.one;
+				submeshGraphic.rectTransform.sizeDelta = Vector2.zero;
 				submeshGraphics.Add(submeshGraphic);
 			}
 		}
@@ -944,42 +1144,52 @@ namespace Spine.Unity {
 			int submeshCount = currentInstructions.submeshInstructions.Count;
 			DisableUnusedCanvasRenderers(usedCount: submeshCount, isInRebuild: isInRebuild);
 
-			int separatorSlotGroupIndex = 0;
-			int targetSiblingIndex = 0;
-			Transform parent = this.separatorSlots.Count == 0 ? this.transform : this.separatorParts[0];
+			Transform parent = this.separatorParts.Count == 0 ? this.transform : this.separatorParts[0];
 			if (updateSeparatorPartLocation) {
 				for (int p = 0; p < this.separatorParts.Count; ++p) {
-					separatorParts[p].position = this.transform.position;
-					separatorParts[p].rotation = this.transform.rotation;
+					Transform separatorPart = separatorParts[p];
+					if (separatorPart == null) continue;
+					separatorPart.position = this.transform.position;
+					separatorPart.rotation = this.transform.rotation;
 				}
 			}
 			if (updateSeparatorPartScale) {
 				Vector3 targetScale = this.transform.lossyScale;
 				for (int p = 0; p < this.separatorParts.Count; ++p) {
-					Transform partParent = separatorParts[p].transform.parent;
+					Transform separatorPart = separatorParts[p];
+					if (separatorPart == null) continue;
+					Transform partParent = separatorPart.parent;
 					Vector3 parentScale = partParent == null ? Vector3.one : partParent.lossyScale;
-					separatorParts[p].localScale = new Vector3(
+					separatorPart.localScale = new Vector3(
 						parentScale.x == 0f ? 1f : targetScale.x / parentScale.x,
 						parentScale.y == 0f ? 1f : targetScale.y / parentScale.y,
 						parentScale.z == 0f ? 1f : targetScale.z / parentScale.z);
 				}
 			}
 
+			int separatorSlotGroupIndex = 0;
+			int targetSiblingIndex = 0;
 			for (int i = 0; i < submeshCount; i++) {
 				CanvasRenderer canvasRenderer = canvasRenderers[i];
-				if (i >= usedRenderersCount)
-					canvasRenderer.gameObject.SetActive(true);
+				if (canvasRenderer != null) {
+					if (i >= usedRenderersCount)
+						canvasRenderer.gameObject.SetActive(true);
 
-				if (canvasRenderer.transform.parent != parent.transform)
-					canvasRenderer.transform.SetParent(parent.transform, false);
+					if (canvasRenderer.transform.parent != parent.transform && !isInRebuild)
+						canvasRenderer.transform.SetParent(parent.transform, false);
 
-				canvasRenderer.transform.SetSiblingIndex(targetSiblingIndex++);
-				RectTransform dstTransform = submeshGraphics[i].rectTransform;
-				dstTransform.localPosition = Vector3.zero;
-				dstTransform.pivot = rectTransform.pivot;
-				dstTransform.anchorMin = Vector2.zero;
-				dstTransform.anchorMax = Vector2.one;
-				dstTransform.sizeDelta = Vector2.zero;
+					canvasRenderer.transform.SetSiblingIndex(targetSiblingIndex++);
+				}
+
+				SkeletonSubmeshGraphic submeshGraphic = submeshGraphics[i];
+				if (submeshGraphic != null) {
+					RectTransform dstTransform = submeshGraphic.rectTransform;
+					dstTransform.localPosition = Vector3.zero;
+					dstTransform.pivot = rectTransform.pivot;
+					dstTransform.anchorMin = Vector2.zero;
+					dstTransform.anchorMax = Vector2.one;
+					dstTransform.sizeDelta = Vector2.zero;
+				}
 
 				SubmeshInstruction submeshInstructionItem = currentInstructions.submeshInstructions.Items[i];
 				if (submeshInstructionItem.forceSeparate) {
@@ -1007,6 +1217,7 @@ namespace Spine.Unity {
 				for (int i = canvasRenderers.Count - 1; i >= 0; --i) {
 					if (canvasRenderers[i] == null) {
 						canvasRenderers.RemoveAt(i);
+						submeshGraphics.RemoveAt(i);
 					}
 				}
 			}
@@ -1074,7 +1285,14 @@ namespace Spine.Unity {
 			for (int i = currentCount; i < targetCount; ++i) {
 				GameObject go = new GameObject(string.Format("{0}[{1}]", SeparatorPartGameObjectName, i), typeof(RectTransform));
 				go.transform.SetParent(this.transform, false);
-				go.transform.localPosition = Vector3.zero;
+
+				RectTransform dstTransform = go.transform.GetComponent<RectTransform>();
+				dstTransform.localPosition = Vector3.zero;
+				dstTransform.pivot = rectTransform.pivot;
+				dstTransform.anchorMin = Vector2.zero;
+				dstTransform.anchorMax = Vector2.one;
+				dstTransform.sizeDelta = Vector2.zero;
+
 				separatorParts.Add(go.transform);
 			}
 		}

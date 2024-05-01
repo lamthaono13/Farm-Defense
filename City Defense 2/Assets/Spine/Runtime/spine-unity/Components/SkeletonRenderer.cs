@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated September 24, 2021. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2021, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -49,6 +49,7 @@
 
 #define SPINE_OPTIONAL_RENDEROVERRIDE
 #define SPINE_OPTIONAL_MATERIALOVERRIDE
+#define SPINE_OPTIONAL_ON_DEMAND_LOADING
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -287,6 +288,75 @@ namespace Spine.Unity {
 		}
 		#endregion
 
+		#region Physics
+		/// <seealso cref="PhysicsPositionInheritanceFactor"/>
+		[SerializeField] protected Vector2 physicsPositionInheritanceFactor = Vector2.one;
+		/// <seealso cref="PhysicsRotationInheritanceFactor"/>
+		[SerializeField] protected float physicsRotationInheritanceFactor = 1.0f;
+		/// <summary>Reference transform relative to which physics movement will be calculated, or null to use world location.</summary>
+		[SerializeField] protected Transform physicsMovementRelativeTo = null;
+
+		/// <summary>Used for applying Transform translation to skeleton PhysicsConstraints.</summary>
+		protected Vector2 lastPosition;
+		/// <summary>Used for applying Transform rotation to skeleton PhysicsConstraints.</summary>
+		protected float lastRotation;
+
+		/// <summary>When set to non-zero, Transform position movement in X and Y direction
+		/// is applied to skeleton PhysicsConstraints, multiplied by this scale factor.
+		/// Typical values are <c>Vector2.one</c> to apply XY movement 1:1,
+		/// <c>Vector2(2f, 2f)</c> to apply movement with double intensity,
+		/// <c>Vector2(1f, 0f)</c> to apply only horizontal movement, or
+		/// <c>Vector2.zero</c> to not apply any Transform position movement at all.</summary>
+		public Vector2 PhysicsPositionInheritanceFactor {
+			get {
+				return physicsPositionInheritanceFactor;
+			}
+			set {
+				if (physicsPositionInheritanceFactor == Vector2.zero && value != Vector2.zero) ResetLastPosition();
+				physicsPositionInheritanceFactor = value;
+			}
+		}
+
+		/// <summary>When set to non-zero, Transform rotation movement is applied to skeleton PhysicsConstraints,
+		/// multiplied by this scale factor. Typical values are <c>1</c> to apply movement 1:1,
+		/// <c>2</c> to apply movement with double intensity, or
+		/// <c>0</c> to not apply any Transform rotation movement at all.</summary>
+		public float PhysicsRotationInheritanceFactor {
+			get {
+				return physicsRotationInheritanceFactor;
+			}
+			set {
+				if (physicsRotationInheritanceFactor == 0f && value != 0f) ResetLastRotation();
+				physicsRotationInheritanceFactor = value;
+			}
+		}
+
+		/// <summary>Reference transform relative to which physics movement will be calculated, or null to use world location.</summary>
+		public Transform PhysicsMovementRelativeTo {
+			get {
+				return physicsMovementRelativeTo;
+			}
+			set {
+				physicsMovementRelativeTo = value;
+				if (physicsPositionInheritanceFactor != Vector2.zero) ResetLastPosition();
+				if (physicsRotationInheritanceFactor != 0f) ResetLastRotation();
+			}
+		}
+
+		public void ResetLastPosition () {
+			lastPosition = GetPhysicsTransformPosition();
+		}
+
+		public void ResetLastRotation () {
+			lastRotation = GetPhysicsTransformRotation();
+		}
+
+		public void ResetLastPositionAndRotation () {
+			lastPosition = GetPhysicsTransformPosition();
+			lastRotation = GetPhysicsTransformRotation();
+		}
+		#endregion
+
 		public delegate void SkeletonRendererDelegate (SkeletonRenderer skeletonRenderer);
 
 		/// <summary>OnRebuild is raised after the Skeleton is successfully initialized.</summary>
@@ -412,6 +482,8 @@ namespace Spine.Unity {
 				ScaleY = initialFlipY ? -1 : 1
 			};
 
+			ResetLastPositionAndRotation();
+
 			if (!string.IsNullOrEmpty(initialSkinName) && !string.Equals(initialSkinName, "default", System.StringComparison.Ordinal))
 				skeleton.SetSkin(initialSkinName);
 
@@ -422,7 +494,7 @@ namespace Spine.Unity {
 			// Generate mesh once, required to update mesh bounds for visibility
 			UpdateMode updateModeSaved = updateMode;
 			updateMode = UpdateMode.FullUpdate;
-			skeleton.UpdateWorldTransform();
+			UpdateWorldTransform(Skeleton.Physics.Update);
 			LateUpdate();
 			updateMode = updateModeSaved;
 
@@ -436,6 +508,56 @@ namespace Spine.Unity {
 					Debug.LogWarningFormat(this, "Problematic material setup at {0}: {1}", this.name, errorMessage);
 			}
 #endif
+		}
+
+		public virtual void ApplyTransformMovementToPhysics () {
+			if (Application.isPlaying) {
+				if (physicsPositionInheritanceFactor != Vector2.zero) {
+					Vector2 position = GetPhysicsTransformPosition();
+					Vector2 positionDelta = position - lastPosition;
+					if (physicsMovementRelativeTo != null) {
+						positionDelta.x *= physicsMovementRelativeTo.lossyScale.x;
+						positionDelta.y *= physicsMovementRelativeTo.lossyScale.y;
+					}
+					positionDelta.x *= physicsPositionInheritanceFactor.x / transform.lossyScale.x;
+					positionDelta.y *= physicsPositionInheritanceFactor.y / transform.lossyScale.y;
+					skeleton.PhysicsTranslate(positionDelta.x, positionDelta.y);
+					lastPosition = position;
+				}
+				if (physicsRotationInheritanceFactor != 0f) {
+					float rotation = GetPhysicsTransformRotation();
+					skeleton.PhysicsRotate(0, 0, physicsRotationInheritanceFactor * (rotation - lastRotation));
+					lastRotation = rotation;
+				}
+			}
+		}
+
+		protected Vector2 GetPhysicsTransformPosition () {
+			if (physicsMovementRelativeTo == null) {
+				return transform.position;
+			} else {
+				if (physicsMovementRelativeTo == transform.parent)
+					return transform.localPosition;
+				else
+					return physicsMovementRelativeTo.InverseTransformPoint(transform.position);
+			}
+		}
+
+		protected float GetPhysicsTransformRotation () {
+			if (physicsMovementRelativeTo == null) {
+				return this.transform.rotation.eulerAngles.z;
+			} else {
+				if (physicsMovementRelativeTo == this.transform.parent)
+					return this.transform.localRotation.eulerAngles.z;
+				else {
+					Quaternion relative = Quaternion.Inverse(physicsMovementRelativeTo.rotation) * this.transform.rotation;
+					return relative.eulerAngles.z;
+				}
+			}
+		}
+
+		protected virtual void UpdateWorldTransform (Skeleton.Physics physics) {
+			skeleton.UpdateWorldTransform(physics);
 		}
 
 		/// <summary>
@@ -564,6 +686,10 @@ namespace Spine.Unity {
 			if (meshRenderer != null) {
 				AssignSpriteMaskMaterials();
 			}
+#endif
+#if SPINE_OPTIONAL_ON_DEMAND_LOADING
+			if (Application.isPlaying)
+				HandleOnDemandLoading();
 #endif
 
 #if PER_MATERIAL_PROPERTY_BLOCKS
@@ -742,6 +868,23 @@ namespace Spine.Unity {
 #endif // UNITY_EDITOR
 
 #endif //#if BUILT_IN_SPRITE_MASK_COMPONENT
+
+#if SPINE_OPTIONAL_ON_DEMAND_LOADING
+		void HandleOnDemandLoading () {
+			foreach (AtlasAssetBase atlasAsset in skeletonDataAsset.atlasAssets) {
+				if (atlasAsset.TextureLoadingMode != AtlasAssetBase.LoadingMode.Normal) {
+					atlasAsset.BeginCustomTextureLoading();
+					for (int i = 0, count = meshRenderer.sharedMaterials.Length; i < count; ++i) {
+						Material overrideMaterial = null;
+						atlasAsset.RequireTexturesLoaded(meshRenderer.sharedMaterials[i], ref overrideMaterial);
+						if (overrideMaterial != null)
+							meshRenderer.sharedMaterials[i] = overrideMaterial;
+					}
+					atlasAsset.EndCustomTextureLoading();
+				}
+			}
+		}
+#endif
 
 #if PER_MATERIAL_PROPERTY_BLOCKS
 		private MaterialPropertyBlock reusedPropertyBlock;

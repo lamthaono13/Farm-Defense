@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
 
     public bool CanSetTimeScale => canSetTimeScale;
 
+    public bool IsGameDesign => isGameDesign;
+
     //[SerializeField] private GameObject objNotEnoughGold;
 
     //[SerializeField] private GameObject objNotEnoughGem;
